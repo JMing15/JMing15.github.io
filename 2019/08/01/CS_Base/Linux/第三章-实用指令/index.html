@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | JMing15.github.io</title>
+  <title>第三章-实用指令 | JMing15.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="#一、指定运行级别 ##运行级别说明  0：关机 1：单用户（可用户找回丢失密码） 2：多用户状态（没有网络服务） 3：多用户状态（有网络服务） 4：系统未使用保留给用户 5：图形界面 6：系统重启 常用运行级别是3和5，要修改默认的运行级别可改文件 init 123456：进入指定运行级别     #二、帮助指令 ##man获的帮助信息  man 命令或配置文件： help 命令：  #三、文件">
+<meta name="keywords" content="-Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第三章-实用指令">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/CS_Base/Linux/第三章-实用指令/index.html">
 <meta property="og:site_name" content="JMing15.github.io">
+<meta property="og:description" content="#一、指定运行级别 ##运行级别说明  0：关机 1：单用户（可用户找回丢失密码） 2：多用户状态（没有网络服务） 3：多用户状态（有网络服务） 4：系统未使用保留给用户 5：图形界面 6：系统重启 常用运行级别是3和5，要修改默认的运行级别可改文件 init 123456：进入指定运行级别     #二、帮助指令 ##man获的帮助信息  man 命令或配置文件： help 命令：  #三、文件">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-25T13:01:01.828Z">
+<meta property="og:updated_time" content="2019-08-02T13:45:52.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="第三章-实用指令">
+<meta name="twitter:description" content="#一、指定运行级别 ##运行级别说明  0：关机 1：单用户（可用户找回丢失密码） 2：多用户状态（没有网络服务） 3：多用户状态（有网络服务） 4：系统未使用保留给用户 5：图形界面 6：系统重启 常用运行级别是3和5，要修改默认的运行级别可改文件 init 123456：进入指定运行级别     #二、帮助指令 ##man获的帮助信息  man 命令或配置文件： help 命令：  #三、文件">
   
     <link rel="alternative" href="/atom.xml" title="JMing15.github.io" type="application/atom+xml">
   
@@ -151,27 +155,86 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-CS_Base/Linux/第三章-实用指令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      第三章-实用指令
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2019-07-25T13:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+        <a href="/2019/08/01/CS_Base/Linux/第三章-实用指令/" class="archive-article-date">
+  	<time datetime="2019-08-01T09:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#一、指定运行级别</p>
+<p>##运行级别说明</p>
+<ul>
+<li>0：关机</li>
+<li>1：单用户（可用户找回丢失密码）</li>
+<li>2：多用户状态（没有网络服务）</li>
+<li>3：多用户状态（有网络服务）</li>
+<li>4：系统未使用保留给用户</li>
+<li>5：图形界面</li>
+<li>6：系统重启<ul>
+<li>常用运行级别是3和5，要修改默认的运行级别可改文件</li>
+<li>init 123456：进入指定运行级别</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>#二、帮助指令</p>
+<p>##man获的帮助信息</p>
+<ul>
+<li>man 命令或配置文件：</li>
+<li>help 命令：</li>
+</ul>
+<p>#三、文件目录类</p>
+<p>##pwd指令</p>
+<ul>
+<li>pwd：显示当前工作目录的绝对路径（print working directory）</li>
+</ul>
+<p>##ls指令</p>
+<ul>
+<li>ls 选项 目录or文件</li>
+<li>ls -a:显示当前目录的所有文件和目录，包括隐藏的</li>
+<li>ls -l：以列表的方式显示信息</li>
+</ul>
+<p>##cd指令</p>
+<ul>
+<li>cd 目录：切换到指定目录</li>
+<li>cd ~:切换到家目录</li>
+<li>cd ..:切换到当前目录的上一级目录</li>
+</ul>
+<p>##mkdir指令</p>
+<ul>
+<li>mkdir 目录：创建目标目录（make directory）</li>
+<li>mldir -p:创建多级目录</li>
+</ul>
+<p>##rmdir指令</p>
+<ul>
+<li>rmdir 目录：删除空目录</li>
+<li>rmdir -rf 目录：删除非空目录</li>
+</ul>
+<p>##touch指令</p>
+<ul>
+<li>touch 文件名称：创建空文件</li>
+<li>touch可同时创建多个文件</li>
+</ul>
+<p>##cp指令</p>
+<ul>
+<li>cp 选项 source dest：拷贝源文件到目标位置</li>
+<li>cp -r：递归</li>
+</ul>
+
       
 
       
@@ -179,6 +242,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -229,7 +303,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/01/CS_Base/Linux/第三章-实用指令/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -241,6 +315,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/08/01/CS_Base/Computer_Network/第四章-网络层/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          第四章-网络层
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/01/CS_Base/Linux/第二章-Linux用户管理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第二章-用户管理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -291,7 +384,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

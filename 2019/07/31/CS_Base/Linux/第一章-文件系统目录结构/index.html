@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | JMing15.github.io</title>
+  <title>第一章-文件系统目录结构 | JMing15.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="#一、Linux目录结构  基本介绍 Linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录  /bin 存放着最经常使用的命令 /sbin 存放着管理员使用的系统管理程序 /home 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的 /root 管理员用户的主目录 /lib 系统开机所需要的">
+<meta name="keywords" content="-Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一章-文件系统目录结构">
+<meta property="og:url" content="http://yoursite.com/2019/07/31/CS_Base/Linux/第一章-文件系统目录结构/index.html">
 <meta property="og:site_name" content="JMing15.github.io">
+<meta property="og:description" content="#一、Linux目录结构  基本介绍 Linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录  /bin 存放着最经常使用的命令 /sbin 存放着管理员使用的系统管理程序 /home 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的 /root 管理员用户的主目录 /lib 系统开机所需要的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-25T13:01:01.828Z">
+<meta property="og:updated_time" content="2019-08-01T08:37:37.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="第一章-文件系统目录结构">
+<meta name="twitter:description" content="#一、Linux目录结构  基本介绍 Linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录  /bin 存放着最经常使用的命令 /sbin 存放着管理员使用的系统管理程序 /home 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的 /root 管理员用户的主目录 /lib 系统开机所需要的">
   
     <link rel="alternative" href="/atom.xml" title="JMing15.github.io" type="application/atom+xml">
   
@@ -151,27 +155,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-CS_Base/Linux/第一章-文件系统目录结构" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      第一章-文件系统目录结构
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2019-07-25T13:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+        <a href="/2019/07/31/CS_Base/Linux/第一章-文件系统目录结构/" class="archive-article-date">
+  	<time datetime="2019-07-31T07:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#一、Linux目录结构</p>
+<ol>
+<li>基本介绍<ul>
+<li>Linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录 <ul>
+<li>/bin 存放着最经常使用的命令</li>
+<li>/sbin 存放着管理员使用的系统管理程序</li>
+<li>/home 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的</li>
+<li>/root 管理员用户的主目录</li>
+<li>/lib 系统开机所需要的基本动态链接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库</li>
+<li>/lost+found 该目录一般为空，当系统非法关机后，这里就存放了一些文件</li>
+<li>/etc 所有的系统管理所需要的配置文件和目录</li>
+<li>/usr 用户的很多应用程序和文件都放在该目录下，类似于windows的program files目录</li>
+<li>/boot 存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件</li>
+<li>/proc 该目录是一个虚拟目录，它是系统内存的映射，刚问这个目录来获取系统信息</li>
+<li>/srv service缩写，该目录存放一些服务启动之后所需要提取的数据</li>
+<li>/sys 这是linux2.6很大的变化，该目录下安装了2.6内核中新出现的一个文件系统</li>
+<li>/tmp 该目是用来存放一些临时文件</li>
+<li>/dev 类似于windows的设备管理器，把所有的硬件用文件的形式存储</li>
+<li>/media linux系统会自动识别一些设备，例如U盘、光驱等，当识别后linux会把识别的设备挂载到该目录下</li>
+<li>/mnt 系统提供该目录是为了让用户临时挂载别的文件系统，我们可以将外部的存储挂载在/mnt/上</li>
+<li>/opt 这是给主机额外安装软件所摆放的目录，如安装ORACLE数据库就可放到该目录下。默认为空。</li>
+<li>/usr/local 这是另一个主机给额外安装软件所安装的目录，一般是通过编译源码的方式安装的程序</li>
+<li>/var 这个目录中存放着不断扩充着的东西，习惯将经常被修改的目录存放在这个目录下，包括各种日志文件</li>
+<li>/selinux（security-enhance） SELinux是一种安全子系统，它能控制程序只能访问特定文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+
       
 
       
@@ -179,6 +213,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -229,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/31/CS_Base/Linux/第一章-文件系统目录结构/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -241,6 +286,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/08/01/CS_Base/Linux/第二章-Linux用户管理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          第二章-用户管理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/29/CS_Base/Database_System_Concepts/第二章-数据模型/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第二章-数据模型</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -291,7 +355,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | JMing15.github.io</title>
+  <title>第三章-数据链路层 | JMing15.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="#一、数据链路层基本概念及基本问题 ##基本概念  数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  ##基本问题  封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧">
+<meta name="keywords" content="-计算机网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第三章-数据链路层">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/CS_Base/Computer_Network/第三章-数据链路层/index.html">
 <meta property="og:site_name" content="JMing15.github.io">
+<meta property="og:description" content="#一、数据链路层基本概念及基本问题 ##基本概念  数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  ##基本问题  封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-25T13:01:01.828Z">
+<meta property="og:updated_time" content="2019-08-01T12:09:29.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="第三章-数据链路层">
+<meta name="twitter:description" content="#一、数据链路层基本概念及基本问题 ##基本概念  数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  ##基本问题  封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧">
   
     <link rel="alternative" href="/atom.xml" title="JMing15.github.io" type="application/atom+xml">
   
@@ -151,27 +155,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-CS_Base/Computer_Network/第三章-数据链路层" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      第三章-数据链路层
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2019-07-25T13:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+        <a href="/2019/07/27/CS_Base/Computer_Network/第三章-数据链路层/" class="archive-article-date">
+  	<time datetime="2019-07-27T09:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#一、数据链路层基本概念及基本问题</p>
+<p>##基本概念</p>
+<ol>
+<li>数据链路层的信道类型<ul>
+<li>点对点信道：使用一对一的点对点通信方式。</li>
+<li>广播信道：使用一对多的广播通信方式。</li>
+</ul>
+</li>
+<li>链路和数据链路<ul>
+<li>链路：一条点对点的物理线路段，中间没有任何其他的交换节点。</li>
+<li>数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。</li>
+</ul>
+</li>
+<li>数据链路层传送的是帧</li>
+</ol>
+<p>##基本问题</p>
+<ol>
+<li>封装成帧<ul>
+<li>在一段数据的前后分别添加收不和尾部构成一个帧，确定帧的界限。</li>
+<li>首部和尾部的一个重要作用就是帧的定界</li>
+<li>帧首部——帧的数据部分——帧尾部</li>
+</ul>
+</li>
+<li>透明传输<br> - </li>
+<li>差错控制</li>
+</ol>
+<p>#二、两种情况下的数据链路层</p>
+<ol>
+<li>使用点对点信道的数据链路层</li>
+<li>使用广播信道的数据链路层</li>
+</ol>
+<p>#以太局域网（以太网）</p>
+<p>#扩展以太网</p>
+<ol>
+<li>网桥（交换机、集线器、路由器、网桥的概念）</li>
+<li>生成树算法</li>
+<li>虚拟局域网<ul>
+<li>LAN和VLAN:<ul>
+<li>一个VLAN = 一个广播域 = 逻辑网段</li>
+<li>VLAN：分段、灵活性、安全性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>#高速以太网</p>
+
       
 
       
@@ -179,6 +229,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-计算机网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -229,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/27/CS_Base/Computer_Network/第三章-数据链路层/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -241,6 +302,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/07/29/CS_Base/Database_System_Concepts/第二章-数据模型/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          第二章-数据模型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/26/CS_Base/Database_System_Concepts/第一章-引言/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一章-引言</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -291,7 +371,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

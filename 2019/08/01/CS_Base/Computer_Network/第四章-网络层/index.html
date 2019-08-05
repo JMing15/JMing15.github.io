@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | JMing15.github.io</title>
+  <title>第四章-网络层 | JMing15.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="#前言 网络层关注的是如何将分组从源端沿着网络路径送达目的端#一、网络的两种服务 虚拟路和数据报服务 ##两种服务：网络层应该向运输层提供这样的服务？  虚电路服务 虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而不是建立了一条物理连接   数据报服务 网络层向上提供简单灵活的、无连接的、尽最大努力交付的数据报服务     #二、网际协议IP ##虚拟互联网 ###">
+<meta name="keywords" content="-计算机网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第四章-网络层">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/CS_Base/Computer_Network/第四章-网络层/index.html">
 <meta property="og:site_name" content="JMing15.github.io">
+<meta property="og:description" content="#前言 网络层关注的是如何将分组从源端沿着网络路径送达目的端#一、网络的两种服务 虚拟路和数据报服务 ##两种服务：网络层应该向运输层提供这样的服务？  虚电路服务 虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而不是建立了一条物理连接   数据报服务 网络层向上提供简单灵活的、无连接的、尽最大努力交付的数据报服务     #二、网际协议IP ##虚拟互联网 ###">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-25T13:01:01.828Z">
+<meta property="og:updated_time" content="2019-08-01T12:41:18.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="第四章-网络层">
+<meta name="twitter:description" content="#前言 网络层关注的是如何将分组从源端沿着网络路径送达目的端#一、网络的两种服务 虚拟路和数据报服务 ##两种服务：网络层应该向运输层提供这样的服务？  虚电路服务 虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而不是建立了一条物理连接   数据报服务 网络层向上提供简单灵活的、无连接的、尽最大努力交付的数据报服务     #二、网际协议IP ##虚拟互联网 ###">
   
     <link rel="alternative" href="/atom.xml" title="JMing15.github.io" type="application/atom+xml">
   
@@ -151,27 +155,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-CS_Base/Computer_Network/第四章-网络层" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      第四章-网络层
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2019-07-25T13:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+        <a href="/2019/08/01/CS_Base/Computer_Network/第四章-网络层/" class="archive-article-date">
+  	<time datetime="2019-08-01T12:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#前言</p>
+<h2 id="网络层关注的是如何将分组从源端沿着网络路径送达目的端"><a href="#网络层关注的是如何将分组从源端沿着网络路径送达目的端" class="headerlink" title="网络层关注的是如何将分组从源端沿着网络路径送达目的端"></a>网络层关注的是如何将分组从源端沿着网络路径送达目的端</h2><p>#一、网络的两种服务 虚拟路和数据报服务</p>
+<p>##两种服务：网络层应该向运输层提供这样的服务？</p>
+<ul>
+<li>虚电路服务<ul>
+<li>虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而不是建立了一条物理连接</li>
+</ul>
+</li>
+<li>数据报服务<ul>
+<li>网络层向上提供简单灵活的、无连接的、尽最大努力交付的数据报服务</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>#二、网际协议IP</p>
+<p>##虚拟互联网</p>
+<p>###网络互联的设备</p>
+<ol>
+<li>中间设备又称为中间系统或中继（relay）系统<ul>
+<li>物理层中继系统：转发器（集线器）（repeater）-&gt;信号放大</li>
+<li>数据链路层中继系统：网桥or交换机（bridge）-&gt;</li>
+<li>网络层中继系统：路由器（router）-&gt;</li>
+<li>网络层以上的中继系统：网关（gateway）-&gt;</li>
+</ul>
+</li>
+</ol>
+<p>##IP地址</p>
+<p>##划分子网和构造超网</p>
+<p>##IP地址与硬件地址</p>
+<p>##IP数据报格式</p>
+<p>##IP转发分组的流程</p>
+
       
 
       
@@ -179,6 +214,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-计算机网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -229,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/01/CS_Base/Computer_Network/第四章-网络层/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -241,6 +287,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/01/CS_Base/Linux/第三章-实用指令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第三章-实用指令</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -291,7 +347,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

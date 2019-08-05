@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | JMing15.github.io</title>
+  <title>汇编 | JMing15.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="#汇编指令编程（基本指令） ##基本指令  debug基本指令 R：查看、改变寄存器的内容(R 寄存器名称) D：查看内存中的内容（D 段地址：偏移地址例: D 1000:0 查看起始地址为1000:0及后的128个内存单元的内容  D 1000:9 查看起始地址为1000:9机后的128个内存单元的内容  D 1000:0 9 查看起始地址为1000:0，结尾地址为1000:9的内存单元内容）">
+<meta name="keywords" content="-汇编">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编">
+<meta property="og:url" content="http://yoursite.com/2019/07/25/CS_Base/Assembly_Language/汇编/index.html">
 <meta property="og:site_name" content="JMing15.github.io">
+<meta property="og:description" content="#汇编指令编程（基本指令） ##基本指令  debug基本指令 R：查看、改变寄存器的内容(R 寄存器名称) D：查看内存中的内容（D 段地址：偏移地址例: D 1000:0 查看起始地址为1000:0及后的128个内存单元的内容  D 1000:9 查看起始地址为1000:9机后的128个内存单元的内容  D 1000:0 9 查看起始地址为1000:0，结尾地址为1000:9的内存单元内容）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-25T13:01:01.828Z">
+<meta property="og:updated_time" content="2019-07-26T11:57:35.085Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="汇编">
+<meta name="twitter:description" content="#汇编指令编程（基本指令） ##基本指令  debug基本指令 R：查看、改变寄存器的内容(R 寄存器名称) D：查看内存中的内容（D 段地址：偏移地址例: D 1000:0 查看起始地址为1000:0及后的128个内存单元的内容  D 1000:9 查看起始地址为1000:9机后的128个内存单元的内容  D 1000:0 9 查看起始地址为1000:0，结尾地址为1000:9的内存单元内容）">
   
     <link rel="alternative" href="/atom.xml" title="JMing15.github.io" type="application/atom+xml">
   
@@ -151,27 +155,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="blog-CS_Base/Assembly_Language/汇编" class="article article-type-blog " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      汇编
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2019-07-25T13:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+        <a href="/2019/07/25/CS_Base/Assembly_Language/汇编/" class="archive-article-date">
+  	<time datetime="2019-07-25T13:54:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#汇编指令编程（基本指令）</p>
+<p>##基本指令</p>
+<ol>
+<li>debug基本指令<ul>
+<li>R：查看、改变寄存器的内容(R 寄存器名称)</li>
+<li>D：查看内存中的内容（D 段地址：偏移地址<br>例: D 1000:0 查看起始地址为1000:0及后的128个内存单元的内容<br>  D 1000:9 查看起始地址为1000:9机后的128个内存单元的内容<br>  D 1000:0 9 查看起始地址为1000:0，结尾地址为1000:9的内存单元内容）</li>
+<li>E: 改写内存单元的内容(E 内存起始地址 数据 数据 数据…)</li>
+<li>U：将内存中的机器指令翻译成汇编指令</li>
+<li>T：执行一条机器指令</li>
+<li>A：以汇编指令的格式在内存中写入一条机器指令</li>
+</ul>
+</li>
+</ol>
+
       
 
       
@@ -179,7 +196,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-汇编</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/CS基础//" class="article-tag-list-link color5">CS基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -229,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/25/CS_Base/Assembly_Language/汇编/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -241,6 +280,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/07/26/CS_Base/Computer_Network/第一章-计算机网络概述/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          第一章-计算机网络概述
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -291,7 +344,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

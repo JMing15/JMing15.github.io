@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh_CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -113,25 +113,25 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     translation: {
-      copy_button: 'Kopieren',
-      copy_success: 'Kopiert',
-      copy_failure: 'Kopieren fehlgeschlagen'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     }
   };
 </script>
 
-  <meta name="description" content="#一、数据链路层基本概念及基本问题 ##基本概念  数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  ##基本问题  封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧">
+  <meta name="description" content="一、数据链路层基本概念及基本问题基本概念 数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  基本问题 封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧，确定帧的界限。">
 <meta name="keywords" content="-Network">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第三章-数据链路层">
 <meta property="og:url" content="http://yoursite.com/2019/07/27/CS_Base/Computer_Network/第三章-数据链路层/index.html">
 <meta property="og:site_name" content="JMing">
-<meta property="og:description" content="#一、数据链路层基本概念及基本问题 ##基本概念  数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  ##基本问题  封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-08-05T02:51:22.249Z">
+<meta property="og:description" content="一、数据链路层基本概念及基本问题基本概念 数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  基本问题 封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧，确定帧的界限。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-05T06:34:49.157Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第三章-数据链路层">
-<meta name="twitter:description" content="#一、数据链路层基本概念及基本问题 ##基本概念  数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  ##基本问题  封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧">
+<meta name="twitter:description" content="一、数据链路层基本概念及基本问题基本概念 数据链路层的信道类型 点对点信道：使用一对一的点对点通信方式。 广播信道：使用一对多的广播通信方式。   链路和数据链路 链路：一条点对点的物理线路段，中间没有任何其他的交换节点。 数据链路： 除了物理线路外，还必须有通信协议来控制这些数据的传输。   数据链路层传送的是帧  基本问题 封装成帧 在一段数据的前后分别添加收不和尾部构成一个帧，确定帧的界限。">
 
 
 
@@ -191,7 +191,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -222,7 +222,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -249,7 +249,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -265,7 +265,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -349,14 +349,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-07-27 17:27:27" itemprop="dateCreated datePublished" datetime="2019-07-27T17:27:27+08:00">2019-07-27</time>
+              <time title="Created: 2019-07-27 17:27:27" itemprop="dateCreated datePublished" datetime="2019-07-27T17:27:27+08:00">2019-07-27</time>
             </span>
           
 
@@ -369,9 +369,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-08-05 10:51:22" itemprop="dateModified" datetime="2019-08-05T10:51:22+08:00">2019-08-05</time>
+                <time title="Modified: 2019-08-05 14:34:49" itemprop="dateModified" datetime="2019-08-05T14:34:49+08:00">2019-08-05</time>
               </span>
             
           
@@ -410,9 +410,7 @@
       
 
       
-        <p>#一、数据链路层基本概念及基本问题</p>
-<p>##基本概念</p>
-<ol>
+        <h1 id="一、数据链路层基本概念及基本问题"><a href="#一、数据链路层基本概念及基本问题" class="headerlink" title="一、数据链路层基本概念及基本问题"></a>一、数据链路层基本概念及基本问题</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ol>
 <li>数据链路层的信道类型<ul>
 <li>点对点信道：使用一对一的点对点通信方式。</li>
 <li>广播信道：使用一对多的广播通信方式。</li>
@@ -425,8 +423,7 @@
 </li>
 <li>数据链路层传送的是帧</li>
 </ol>
-<p>##基本问题</p>
-<ol>
+<h2 id="基本问题"><a href="#基本问题" class="headerlink" title="基本问题"></a>基本问题</h2><ol>
 <li>封装成帧<ul>
 <li>在一段数据的前后分别添加收不和尾部构成一个帧，确定帧的界限。</li>
 <li>首部和尾部的一个重要作用就是帧的定界</li>
@@ -436,14 +433,11 @@
 <li>透明传输<br> - </li>
 <li>差错控制</li>
 </ol>
-<p>#二、两种情况下的数据链路层</p>
-<ol>
+<h1 id="二、两种情况下的数据链路层"><a href="#二、两种情况下的数据链路层" class="headerlink" title="二、两种情况下的数据链路层"></a>二、两种情况下的数据链路层</h1><ol>
 <li>使用点对点信道的数据链路层</li>
 <li>使用广播信道的数据链路层</li>
 </ol>
-<p>#以太局域网（以太网）</p>
-<p>#扩展以太网</p>
-<ol>
+<h1 id="以太局域网（以太网）"><a href="#以太局域网（以太网）" class="headerlink" title="以太局域网（以太网）"></a>以太局域网（以太网）</h1><h1 id="扩展以太网"><a href="#扩展以太网" class="headerlink" title="扩展以太网"></a>扩展以太网</h1><ol>
 <li>网桥（交换机、集线器、路由器、网桥的概念）</li>
 <li>生成树算法</li>
 <li>虚拟局域网<ul>
@@ -455,8 +449,7 @@
 </ul>
 </li>
 </ol>
-<p>#高速以太网</p>
-
+<h1 id="高速以太网"><a href="#高速以太网" class="headerlink" title="高速以太网"></a>高速以太网</h1>
       
     </div>
 
@@ -555,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -575,7 +577,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">Artikel</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
     
@@ -594,7 +596,7 @@
           
         
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">Kategorien</span>
+        <span class="site-state-item-name">categories</span>
         </a>
       </div>
     
@@ -619,7 +621,7 @@
           
         
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">schlagwörter</span>
+        <span class="site-state-item-name">tags</span>
         </a>
       </div>
     
@@ -642,6 +644,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、数据链路层基本概念及基本问题"><span class="nav-number">1.</span> <span class="nav-text">一、数据链路层基本概念及基本问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本问题"><span class="nav-number">1.2.</span> <span class="nav-text">基本问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、两种情况下的数据链路层"><span class="nav-number">2.</span> <span class="nav-text">二、两种情况下的数据链路层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以太局域网（以太网）"><span class="nav-number">3.</span> <span class="nav-text">以太局域网（以太网）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展以太网"><span class="nav-number">4.</span> <span class="nav-text">扩展以太网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高速以太网"><span class="nav-number">5.</span> <span class="nav-text">高速以太网</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -669,7 +688,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
 
 
 
@@ -677,7 +696,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
 
 
 

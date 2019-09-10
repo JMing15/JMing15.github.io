@@ -120,16 +120,18 @@
   };
 </script>
 
-  <meta name="description" content="记录一些问题，反思一些问题，避免一些问题。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JMing">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="一、进程间通信需要解决哪些问题？  一个进程如何向另一个进程传送信息 如何宝成两个或多个进程在涉及临界活动时不会受彼此影响 当进程间存在依赖关系时如何确定适当的次序   二、如何保证进程面对临界区时能够正确高效的运行？  任何两个进程不能同时处于临界区 不应对CPU的速度和数目做任何假设 临界区外的进程不得阻塞其他进程 不得使进程在临界区外无休止地等待">
+<meta name="keywords" content="-OS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进程间的通信">
+<meta property="og:url" content="http://yoursite.com/2019/09/06/CS_Base/OS/进程间的通信/index.html">
 <meta property="og:site_name" content="JMing">
-<meta property="og:description" content="记录一些问题，反思一些问题，避免一些问题。">
+<meta property="og:description" content="一、进程间通信需要解决哪些问题？  一个进程如何向另一个进程传送信息 如何宝成两个或多个进程在涉及临界活动时不会受彼此影响 当进程间存在依赖关系时如何确定适当的次序   二、如何保证进程面对临界区时能够正确高效的运行？  任何两个进程不能同时处于临界区 不应对CPU的速度和数目做任何假设 临界区外的进程不得阻塞其他进程 不得使进程在临界区外无休止地等待">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-10T01:07:53.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMing">
-<meta name="twitter:description" content="记录一些问题，反思一些问题，避免一些问题。">
+<meta name="twitter:title" content="进程间的通信">
+<meta name="twitter:description" content="一、进程间通信需要解决哪些问题？  一个进程如何向另一个进程传送信息 如何宝成两个或多个进程在涉及临界活动时不会受彼此影响 当进程间存在依赖关系时如何确定适当的次序   二、如何保证进程面对临界区时能够正确高效的运行？  任何两个进程不能同时处于临界区 不应对CPU的速度和数目做任何假设 临界区外的进程不得阻塞其他进程 不得使进程在临界区外无休止地等待">
 
 
 
@@ -137,7 +139,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/2019/08/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/06/CS_Base/OS/进程间的通信/">
 
 
 
@@ -148,7 +150,7 @@
 </script>
 
   
-  <title>归档 | JMing</title>
+  <title>进程间的通信 | JMing</title>
   
 
 
@@ -196,7 +198,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,7 +288,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -323,206 +325,218 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/06/CS_Base/OS/进程间的通信/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JMing">
+      <meta itemprop="description" content="记录一些问题，反思一些问题，避免一些问题。">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JMing">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">进程间的通信
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 13 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+          
 
-        
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              
+                
+              
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/13/CS_Base/Linux/Linux教程4-组管理和权限管理/" itemprop="url">
+              <time title="创建时间：2019-09-06 21:30:59" itemprop="dateCreated datePublished" datetime="2019-09-06T21:30:59+08:00">2019-09-06</time>
+            </span>
+          
+
+          
             
-              <span itemprop="name">Linux教程4-组管理和权限管理</span>
+
             
-          </a>
-        
-      </h2>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-10 09:07:53" itemprop="dateModified" datetime="2019-09-10T09:07:53+08:00">2019-09-10</time>
+              </span>
+            
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-13T21:36:54+08:00" content="2019-08-13">
-          08-13
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
+            
+            
+          
 
+          
+          
 
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/CS_Base/Computer_Network/第四章-网络层/" itemprop="url">
-            
-              <span itemprop="name">第四章-网络层</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T20:10:19+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/CS_Base/Linux/Linux教程3-实用指令/" itemprop="url">
-            
-              <span itemprop="name">Linux教程3-实用指令</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T17:25:00+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="一、进程间通信需要解决哪些问题？"><a href="#一、进程间通信需要解决哪些问题？" class="headerlink" title="一、进程间通信需要解决哪些问题？"></a>一、进程间通信需要解决哪些问题？</h1><blockquote>
+<ol>
+<li>一个进程如何向另一个进程传送信息</li>
+<li>如何宝成两个或多个进程在涉及临界活动时不会受彼此影响</li>
+<li>当进程间存在依赖关系时如何确定适当的次序</li>
+</ol>
+</blockquote>
+<h1 id="二、如何保证进程面对临界区时能够正确高效的运行？"><a href="#二、如何保证进程面对临界区时能够正确高效的运行？" class="headerlink" title="二、如何保证进程面对临界区时能够正确高效的运行？"></a>二、如何保证进程面对临界区时能够正确高效的运行？</h1><blockquote>
+<ol>
+<li>任何两个进程不能同时处于临界区</li>
+<li>不应对CPU的速度和数目做任何假设</li>
+<li>临界区外的进程不得阻塞其他进程</li>
+<li>不得使进程在临界区外无休止地等待</li>
+</ol>
+</blockquote>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/CS_Base/Linux/Linux教程2-用户管理/" itemprop="url">
-            
-              <span itemprop="name">Linux教程2-用户管理</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T16:37:10+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/OS/" rel="tag"># -OS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/13/CS_Base/Linux/Linux教程4-组管理和权限管理/" rel="next" title="Linux教程4-组管理和权限管理">
+                <i class="fa fa-chevron-left"></i> Linux教程4-组管理和权限管理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/09/CS_Base/Linux/Linux教程-网络基础/" rel="prev" title="Linux教程-网络基础">
+                Linux教程-网络基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -542,8 +556,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -646,6 +669,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、进程间通信需要解决哪些问题？"><span class="nav-number">1.</span> <span class="nav-text">一、进程间通信需要解决哪些问题？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、如何保证进程面对临界区时能够正确高效的运行？"><span class="nav-number">2.</span> <span class="nav-text">二、如何保证进程面对临界区时能够正确高效的运行？</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -777,6 +817,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -797,6 +841,8 @@
 
 
 
+
+  
 
 
 

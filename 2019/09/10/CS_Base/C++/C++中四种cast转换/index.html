@@ -121,14 +121,16 @@
 </script>
 
   <meta name="description" content="记录一些问题，反思一些问题，避免一些问题。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JMing">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="keywords" content="-C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++中四种cast转换">
+<meta property="og:url" content="http://yoursite.com/2019/09/10/CS_Base/C++/C++中四种cast转换/index.html">
 <meta property="og:site_name" content="JMing">
 <meta property="og:description" content="记录一些问题，反思一些问题，避免一些问题。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-10T11:34:00.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMing">
+<meta name="twitter:title" content="C++中四种cast转换">
 <meta name="twitter:description" content="记录一些问题，反思一些问题，避免一些问题。">
 
 
@@ -137,7 +139,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/10/CS_Base/C++/C++中四种cast转换/">
 
 
 
@@ -148,7 +150,7 @@
 </script>
 
   
-  <title>归档 | JMing</title>
+  <title>C++中四种cast转换 | JMing</title>
   
 
 
@@ -196,7 +198,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,7 +288,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -323,420 +325,193 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/CS_Base/C++/C++中四种cast转换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JMing">
+      <meta itemprop="description" content="记录一些问题，反思一些问题，避免一些问题。">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JMing">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">C++中四种cast转换
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 15 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+          
 
-        
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              
+                
+              
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/10/CS_Base/C++/C++中令人困惑的const/" itemprop="url">
+              <time title="创建时间：2019-09-10 15:12:11 / 修改时间：19:34:00" itemprop="dateCreated datePublished" datetime="2019-09-10T15:12:11+08:00">2019-09-10</time>
+            </span>
+          
+
+          
             
-              <span itemprop="name">C++中令人困惑的const</span>
+
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-10T16:43:36+08:00" content="2019-09-10">
-          09-10
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
+            
+            
+          
 
+          
+          
 
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/10/CS_Base/C++/C++中四种cast转换/" itemprop="url">
-            
-              <span itemprop="name">C++中四种cast转换</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-10T15:12:11+08:00" content="2019-09-10">
-          09-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/10/CS_Base/C++/C++中static关键字/" itemprop="url">
-            
-              <span itemprop="name">C++中static关键字</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-10T10:46:24+08:00" content="2019-09-10">
-          09-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
         
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/09/CS_Base/Linux/Linux教程-网络基础/" itemprop="url">
-            
-              <span itemprop="name">Linux教程-网络基础</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-09T20:52:39+08:00" content="2019-09-09">
-          09-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/06/CS_Base/OS/进程间的通信/" itemprop="url">
-            
-              <span itemprop="name">进程间的通信</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-06T21:30:59+08:00" content="2019-09-06">
-          09-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/13/CS_Base/Linux/Linux教程4-组管理和权限管理/" itemprop="url">
-            
-              <span itemprop="name">Linux教程4-组管理和权限管理</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-13T21:36:54+08:00" content="2019-08-13">
-          08-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/CS_Base/Computer_Network/第四章-网络层/" itemprop="url">
-            
-              <span itemprop="name">第四章-网络层</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T20:10:19+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/CS_Base/Linux/Linux教程3-实用指令/" itemprop="url">
-            
-              <span itemprop="name">Linux教程3-实用指令</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T17:25:00+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/CS_Base/Linux/Linux教程2-用户管理/" itemprop="url">
-            
-              <span itemprop="name">Linux教程2-用户管理</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T16:37:10+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/31/CS_Base/Linux/Linux教程1-文件系统目录结构/" itemprop="url">
-            
-              <span itemprop="name">Linux教程1-文件系统目录结构</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T15:02:38+08:00" content="2019-07-31">
-          07-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># -C++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/10/CS_Base/C++/C++中static关键字/" rel="next" title="C++中static关键字">
+                <i class="fa fa-chevron-left"></i> C++中static关键字
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/10/CS_Base/C++/C++中令人困惑的const/" rel="prev" title="C++中令人困惑的const">
+                C++中令人困惑的const <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+  </article>
 
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -993,6 +768,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1013,6 +792,8 @@
 
 
 
+
+  
 
 
 

@@ -120,18 +120,18 @@
   };
 </script>
 
-  <meta name="description" content="虚析构函数尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须让析构函数为虚函数。例如： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;iostream&amp;gt;using namespace">
+  <meta name="description" content="虚析构函数尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须声明析构函数为虚函数。例如： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;iostream&amp;gt;using namespac">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虚函数-析构函数与虚函数">
 <meta property="og:url" content="http://yoursite.com/2019/09/19/CS_Base/C++/虚函数-析构函数与虚函数/index.html">
 <meta property="og:site_name" content="JMing">
-<meta property="og:description" content="虚析构函数尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须让析构函数为虚函数。例如： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;iostream&amp;gt;using namespace">
+<meta property="og:description" content="虚析构函数尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须声明析构函数为虚函数。例如： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;iostream&amp;gt;using namespac">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-19T14:55:07.936Z">
+<meta property="og:updated_time" content="2019-09-19T14:57:04.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚函数-析构函数与虚函数">
-<meta name="twitter:description" content="虚析构函数尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须让析构函数为虚函数。例如： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;iostream&amp;gt;using namespace">
+<meta name="twitter:description" content="虚析构函数尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须声明析构函数为虚函数。例如： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;iostream&amp;gt;using namespac">
 
 
 
@@ -388,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2019-09-19 22:20:58 / 修改时间：22:55:07" itemprop="dateCreated datePublished" datetime="2019-09-19T22:20:58+08:00">2019-09-19</time>
+              <time title="创建时间：2019-09-19 22:20:58 / 修改时间：22:57:04" itemprop="dateCreated datePublished" datetime="2019-09-19T22:20:58+08:00">2019-09-19</time>
             </span>
           
 
@@ -432,7 +432,7 @@
       
 
       
-        <h1 id="虚析构函数"><a href="#虚析构函数" class="headerlink" title="虚析构函数"></a>虚析构函数</h1><p>尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须让析构函数为虚函数。例如：</p>
+        <h1 id="虚析构函数"><a href="#虚析构函数" class="headerlink" title="虚析构函数"></a>虚析构函数</h1><p>尽管C++提供了默认的析构函数，但是如果对象中存在资源（如动态分配的内存new，数据库handle），我们需要手动释放这些资源。在类存在继承的情况下，我们必须声明析构函数为虚函数。例如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	~Base()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling ~Base()"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span> :</span><span class="keyword">public</span> Base</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span>* m_array;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Derived(<span class="keyword">int</span> size)</span><br><span class="line">	&#123;</span><br><span class="line">		m_array = <span class="keyword">new</span> <span class="keyword">int</span>[size];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~Derived()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling ~Derived()"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">delete</span>[] m_array;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Derived *d&#123; <span class="keyword">new</span> Derived(<span class="number">5</span>) &#125;;</span><br><span class="line">	Base *b = d;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">delete</span> b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>

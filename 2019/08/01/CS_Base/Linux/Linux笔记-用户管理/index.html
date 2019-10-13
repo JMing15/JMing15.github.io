@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="一、vi和vim编辑器的使用 普通模式、插入/编辑模式、命令行模式切换   vim xxx 进入普通模式 i或者a 普通模式进入编辑模式  ESC 编辑模式进入普通模式 :或者/ 普通模式进入命令模式（wq:保存退出 q:退出 q!:强制退出） ESC命令模式进入普通模式   vi和vim快捷键   yy:拷贝当前行,Nyy:拷贝当前行下的N行 p:粘贴 dd:删除当前行,Ndd：删除当前行下的N">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux笔记-用户管理">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/CS_Base/Linux/Linux笔记-用户管理/index.html">
+<meta property="og:site_name" content="JMing">
+<meta property="og:description" content="一、vi和vim编辑器的使用 普通模式、插入/编辑模式、命令行模式切换   vim xxx 进入普通模式 i或者a 普通模式进入编辑模式  ESC 编辑模式进入普通模式 :或者/ 普通模式进入命令模式（wq:保存退出 q:退出 q!:强制退出） ESC命令模式进入普通模式   vi和vim快捷键   yy:拷贝当前行,Nyy:拷贝当前行下的N行 p:粘贴 dd:删除当前行,Ndd：删除当前行下的N">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-26T01:11:42.199Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux笔记-用户管理">
+<meta name="twitter:description" content="一、vi和vim编辑器的使用 普通模式、插入/编辑模式、命令行模式切换   vim xxx 进入普通模式 i或者a 普通模式进入编辑模式  ESC 编辑模式进入普通模式 :或者/ 普通模式进入命令模式（wq:保存退出 q:退出 q!:强制退出） ESC命令模式进入普通模式   vi和vim快捷键   yy:拷贝当前行,Nyy:拷贝当前行下的N行 p:粘贴 dd:删除当前行,Ndd：删除当前行下的N">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/08/01/CS_Base/Linux/Linux笔记-用户管理/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>Linux笔记-用户管理 | JMing</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JMing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Naive Coder</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/CS_Base/Linux/Linux笔记-用户管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JMing">
+      <meta itemprop="description" content="记录一些问题，反思一些问题，避免一些问题。">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JMing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux笔记-用户管理
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-01 16:37:10" itemprop="dateCreated datePublished" datetime="2019-08-01T16:37:10+08:00">2019-08-01</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-26 09:11:42" itemprop="dateModified" datetime="2019-09-26T09:11:42+08:00">2019-09-26</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、vi和vim编辑器的使用"><a href="#一、vi和vim编辑器的使用" class="headerlink" title="一、vi和vim编辑器的使用"></a>一、vi和vim编辑器的使用</h1><ol>
+<li>普通模式、插入/编辑模式、命令行模式切换</li>
+</ol>
+<ul>
+<li>vim xxx 进入普通模式</li>
+<li>i或者a 普通模式进入编辑模式 </li>
+<li>ESC 编辑模式进入普通模式</li>
+<li>:或者/ 普通模式进入命令模式（wq:保存退出 q:退出 q!:强制退出）</li>
+<li>ESC命令模式进入普通模式</li>
+</ul>
+<ol start="2">
+<li>vi和vim快捷键</li>
+</ol>
+<ul>
+<li>yy:拷贝当前行,Nyy:拷贝当前行下的N行</li>
+<li>p:粘贴</li>
+<li>dd:删除当前行,Ndd：删除当前行下的N行</li>
+<li>普通模式下[/目标文本]:在文件中查找某个单词</li>
+<li>set nu/set nonu:设置/取消文件行号</li>
+<li>G/gg：到达文件最末行/大道文件首行</li>
+<li>u：撤销</li>
+<li>普通模式下[N+SHIFT+G]:光标移动到第N行</li>
+</ul>
+<hr>
+<h1 id="二、开机、重启和用户登录注销"><a href="#二、开机、重启和用户登录注销" class="headerlink" title="二、开机、重启和用户登录注销"></a>二、开机、重启和用户登录注销</h1><ol>
+<li>开机、重启指令</li>
+</ol>
+<ul>
+<li>shutdown -h   now 立即关机</li>
+<li>shutdown -h 1 1分钟后关机</li>
+<li>shutdown -r   now 立即重启</li>
+<li>halt          关机，作用和上面一样</li>
+<li>reboot        立即重启</li>
+<li>sync          把内存的数据同步到磁盘</li>
+</ul>
+<ol start="2">
+<li>用户登录注销指令</li>
+</ol>
+<ul>
+<li>logout:注销<ul>
+<li>logout指令在图形运行级别无效，在运行级别3下有效</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="三、用户管理"><a href="#三、用户管理" class="headerlink" title="三、用户管理"></a>三、用户管理</h1><ol>
+<li>添加用户</li>
+</ol>
+<ul>
+<li>useradd [选项] 用户名:添加用户</li>
+<li>useradd -d 指令目录 用户名：给新建的用户指定家目录</li>
+<li>passwd 用户名:设置用户的密码</li>
+<li>cd:切换目录（change directory）</li>
+<li>mkdir 目录名:创建目录</li>
+<li>userdel 用户名:删除用户<ul>
+<li>删除用户但保留家目录:userdel 用户名</li>
+<li>删除用户及用户主目录:userdel -r 用户名</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>查询用户信息指令</li>
+</ol>
+<ul>
+<li>id 用户名：查询用户信息</li>
+</ul>
+<ol start="3">
+<li>切换用户</li>
+</ol>
+<ul>
+<li>su - 用户名：切换至目标用户名<ul>
+<li>高级用户向低级用户切换不需要使用密码，反之则需要</li>
+<li>exit：返回至原来的用户</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>查看当前用户</li>
+</ol>
+<ul>
+<li>whoami:查询当前用户</li>
+</ul>
+<ol start="5">
+<li>用户组</li>
+</ol>
+<ul>
+<li>用户组：类似于角色，系统可以对有共性的多个用户进行统一的管理</li>
+<li>groupadd 组名：新增组<ul>
+<li>useradd -g 用户组 用户名：添加用户同时添加组</li>
+</ul>
+</li>
+<li>groupdel 组名：删除组</li>
+<li>usermod -g 用户组 用户名：修改用户的组</li>
+<li>usermod -d 目录名 用户名：修改该用户登陆的初始目录</li>
+<li>chgrp 组名 文件名：修改文件所在的组</li>
+</ul>
+<ol start="6">
+<li>用户和组的相关文件</li>
+</ol>
+<ul>
+<li>/etc/passwd：用户（user）的配置文件，记录用户的各种信息<ul>
+<li>每行的含义：用户名；口令；用户标识号；组标识号；注释性描述；主目录；登陆Shell</li>
+</ul>
+</li>
+<li>/etc/shadow：口令的配置文件<ul>
+<li>每行的含义：登录名；加密口令；最后一次修改时间；最小时间间隔；最大时间间隔；警告时间；不活动时间；失效时间；标志</li>
+</ul>
+</li>
+<li>/etc/group：组（group）的配置文件，记录Linux包含的组的信息<ul>
+<li>每行的含义：组名；口令；组标识号；组内用户列表</li>
+</ul>
+</li>
+</ul>
+<h1 id="四、Linux文件-目录所有者"><a href="#四、Linux文件-目录所有者" class="headerlink" title="四、Linux文件/目录所有者"></a>四、Linux文件/目录所有者</h1><ol>
+<li>文件/目录所有者<blockquote>
+<p>文件/目录所有者一般为文件的创建者</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>ls -ahl （查看文件的所有者）</li>
+<li>chown 用户名 文件名 （修改文件）</li>
+</ul>
+<h1 id="五、Linux权限"><a href="#五、Linux权限" class="headerlink" title="五、Linux权限"></a>五、Linux权限</h1><ol>
+<li><p>文件类型</p>
+<blockquote>
+<p>-:普通文件<br>d:文件目录<br>l:软链接文件<br>c:字符设备<br>b:块文件，硬盘<br>rwx-rwx-rwx（文件所有者的权限、文件所在组用户的权限、文件其它组用户的权限）</p>
+</blockquote>
+</li>
+<li><p>rwx作用到文件</p>
+</li>
+</ol>
+<ul>
+<li>r：代表可读，可以读取、查看</li>
+<li>w：代表可写，可以修改，但是不代表可以删除该文件，删除一个文件的前提是对该文件所在的目录具有写权限，才能删除文件</li>
+<li>x：代表可执行</li>
+</ul>
+<ol start="3">
+<li>rwx作用到目录</li>
+</ol>
+<ul>
+<li>r：代表可读，可以读取、查看</li>
+<li>w：代表可写</li>
+<li>x：代表可执行</li>
+</ul>
+<ol start="4">
+<li>修改权限<blockquote>
+<p>u:所有者 g：所有组 o:其他人 a:所有人<br>r=4 w=2 x=1</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>chmod：修改文件或目录的权限</li>
+<li>chmod：u-rwx,g=rx,o=x 目录名</li>
+<li>chmod：o+w 目录名</li>
+<li>chmod：a-x 目录名</li>
+</ul>
+<ol start="5">
+<li>修改文件所有者</li>
+</ol>
+<ul>
+<li>chown newowner file：改变文件所有者</li>
+<li>chown newowner:newgroup file：改变文件的所有者和所有组</li>
+</ul>
+<ol start="6">
+<li>改变文件所在组</li>
+</ol>
+<ul>
+<li>chgrp newgroup file：改变文件所有组</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/31/CS_Base/Linux/Linux笔记-文件系统目录结构/" rel="next" title="Linux笔记-文件系统目录结构">
+                <i class="fa fa-chevron-left"></i> Linux笔记-文件系统目录结构
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/01/CS_Base/Linux/Linux笔记-实用指令/" rel="prev" title="Linux笔记-实用指令">
+                Linux笔记-实用指令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" src="/images/me.jpg" alt="JMing">
+  
+  <p class="site-author-name" itemprop="name">JMing</p>
+  <div class="site-description motion-element" itemprop="description">记录一些问题，反思一些问题，避免一些问题。</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+  <div class="links-of-author motion-element">
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/JMing15" title="GitHub &rarr; https://github.com/JMing15" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、vi和vim编辑器的使用"><span class="nav-number">1.</span> <span class="nav-text">一、vi和vim编辑器的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、开机、重启和用户登录注销"><span class="nav-number">2.</span> <span class="nav-text">二、开机、重启和用户登录注销</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、用户管理"><span class="nav-number">3.</span> <span class="nav-text">三、用户管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、Linux文件-目录所有者"><span class="nav-number">4.</span> <span class="nav-text">四、Linux文件/目录所有者</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、Linux权限"><span class="nav-number">5.</span> <span class="nav-text">五、Linux权限</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JMing</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// GET RESPONSIVE HEIGHT PASSED FROM IFRAME
+
+window.addEventListener("message", function(e) {
+  var data = e.data;
+  if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
+    var featureID = data.split(':')[1];
+    var height = data.split(':')[2];
+    $(`iframe[data-feature=${featureID}]`).height(parseInt(height) + 30);
+  }
+}, false);
+</script>
+
+
+
+
+
+
+
+
+  
+
+</body>
+</html>

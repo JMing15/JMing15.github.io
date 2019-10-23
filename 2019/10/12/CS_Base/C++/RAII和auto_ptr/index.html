@@ -128,7 +128,7 @@
 <meta property="og:site_name" content="JMing">
 <meta property="og:description" content="首先考虑下面的情况： 12345678void func()&amp;#123;    Resource* p = new Resource();    //do something    delete p;&amp;#125;  上面是C++中动态创建对象及销毁对象的简单情况，表面看起来不会造成内存泄漏，但是考虑下面的情况： 1234567891011void func()&amp;#123;    Resource*">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T03:21:45.786Z">
+<meta property="og:updated_time" content="2019-10-18T01:45:33.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RAII和auto_ptr">
 <meta name="twitter:description" content="首先考虑下面的情况： 12345678void func()&amp;#123;    Resource* p = new Resource();    //do something    delete p;&amp;#125;  上面是C++中动态创建对象及销毁对象的简单情况，表面看起来不会造成内存泄漏，但是考虑下面的情况： 1234567891011void func()&amp;#123;    Resource*">
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-13 11:21:45" itemprop="dateModified" datetime="2019-10-13T11:21:45+08:00">2019-10-13</time>
+                <time title="修改时间：2019-10-18 09:45:33" itemprop="dateModified" datetime="2019-10-18T09:45:33+08:00">2019-10-18</time>
               </span>
             
           
@@ -477,7 +477,7 @@
 <p>我们通过定义具有移动语义的拷贝构造函数和赋值构造函数，在func运行结束时，通过资源的转移解决了悬空指针的问题，同时相比于深拷贝，这样效率更高！</p>
 <h1 id="std-auto-ptr"><a href="#std-auto-ptr" class="headerlink" title="std::auto_ptr"></a>std::auto_ptr</h1><p>C++98中引入了std::auto_ptr，它的原理类似于上面的Smart_ptr2，但是Smart_ptr2有很多缺陷。正如上面的例子中，我们非常确定<strong>作为函数func返回值的res临时对象不再被使用</strong>，资源的转移不会产生问题，但是如果Smart_ptr2对象作为参数传给函数时，其资源通过拷贝构造函数转移给了函数的临时对象，这时外部的Smart_ptr2资源为空，再次通过外部Smart_ptr2使用该资源时，程序崩溃！</p>
 <p>因此，在C++11中不推荐使用std::auto_ptr。</p>
-<p>注：本文参考<a href="https://www.learncpp.com/cpp-tutorial/78-function-pointers/" target="_blank" rel="noopener">learncpp</a>教程</p>
+<p>注：本文参考<a href="https://www.learncpp.com/cpp-tutorial/15-1-intro-to-smart-pointers-move-semantics/" target="_blank" rel="noopener">learncpp</a>教程</p>
 
       
     </div>
@@ -521,7 +521,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/05/CS_Base/Linux/Linux笔记-Shell编程/" rel="next" title="Linux笔记-Shell编程">
+              <a href="/2019/10/05/CS_Base/Linux/Linux-Shell编程/" rel="next" title="Linux笔记-Shell编程">
                 <i class="fa fa-chevron-left"></i> Linux笔记-Shell编程
               </a>
             
@@ -530,6 +530,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/14/CS_Base/C++/内存安全/" rel="prev" title="内存安全">
+                内存安全 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -601,7 +605,7 @@
         
           <a href="/archives">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -647,7 +651,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

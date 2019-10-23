@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="网络模型   OSI七层参考模型     名称 作用   应用层    表示层    会话层    传输层    网络层    数据链路层    物理层       TCP/IP四层参考模型     名称 代表协议   应用层 FTP/HTTP/SSH/   传输层 TCP/UDP   网络层 IP   数据传输层 以太网帧协议   IP协议TCP/UDP协议常见的网络端口| | 端口配置文件：/">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux-网络基础">
+<meta property="og:url" content="http://yoursite.com/2019/09/09/CS_Base/Linux/Linux-网络基础/index.html">
+<meta property="og:site_name" content="JMing">
+<meta property="og:description" content="网络模型   OSI七层参考模型     名称 作用   应用层    表示层    会话层    传输层    网络层    数据链路层    物理层       TCP/IP四层参考模型     名称 代表协议   应用层 FTP/HTTP/SSH/   传输层 TCP/UDP   网络层 IP   数据传输层 以太网帧协议   IP协议TCP/UDP协议常见的网络端口| | 端口配置文件：/">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-23T01:31:12.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux-网络基础">
+<meta name="twitter:description" content="网络模型   OSI七层参考模型     名称 作用   应用层    表示层    会话层    传输层    网络层    数据链路层    物理层       TCP/IP四层参考模型     名称 代表协议   应用层 FTP/HTTP/SSH/   传输层 TCP/UDP   网络层 IP   数据传输层 以太网帧协议   IP协议TCP/UDP协议常见的网络端口| | 端口配置文件：/">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/09/09/CS_Base/Linux/Linux-网络基础/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>Linux-网络基础 | JMing</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JMing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Naive Coder</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/CS_Base/Linux/Linux-网络基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JMing">
+      <meta itemprop="description" content="记录一些问题，反思一些问题，避免一些问题。">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JMing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux-网络基础
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-09 20:52:39" itemprop="dateCreated datePublished" datetime="2019-09-09T20:52:39+08:00">2019-09-09</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-23 09:31:12" itemprop="dateModified" datetime="2019-10-23T09:31:12+08:00">2019-10-23</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h1><table>
+<thead>
+<tr>
+<th align="center">OSI七层参考模型</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">名称</td>
+<td align="center">作用</td>
+</tr>
+<tr>
+<td align="center">应用层</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">表示层</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">会话层</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">数据链路层</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">物理层</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">TCP/IP四层参考模型</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">名称</td>
+<td align="center">代表协议</td>
+</tr>
+<tr>
+<td align="center">应用层</td>
+<td align="center">FTP/HTTP/SSH/</td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td align="center">TCP/UDP</td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td align="center">IP</td>
+</tr>
+<tr>
+<td align="center">数据传输层</td>
+<td align="center">以太网帧协议</td>
+</tr>
+</tbody></table>
+<h1 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h1><h1 id="TCP-UDP协议"><a href="#TCP-UDP协议" class="headerlink" title="TCP/UDP协议"></a>TCP/UDP协议</h1><h1 id="常见的网络端口"><a href="#常见的网络端口" class="headerlink" title="常见的网络端口"></a>常见的网络端口</h1><pre><code>| | 端口配置文件：/etc/services | |
+| :---: | :---: | :---: |
+| 20/21 | ftp服务 | 文件共享 |
+| 22 | ssh服务 | 安全远程管理 |
+| 23 | telnet服务| 不安全远程管理 |
+| 25 | smtp简单邮件传输协议 | 发信 |
+| 465 | smtp(ssl) | 发信 |
+| 110 | pop3:邮局协议 | 收信 |
+| 143 | imap4 | 收信 |
+| 993 | imap4(ssl) | 收信 |
+| 80 | www服务(http://) | 网页访问 |
+| 443 | www服务(https://) | 加密网页访问 |
+| 3306 | mysql端口 | 数据库连接端口 |
+| 53 | DNS端口 | 域名解析端口 |</code></pre><ol start="2">
+<li>Linux配置IP地址的方法</li>
+</ol>
+<ul>
+<li>ifconfig：查看与配置网络命令状态<br>例：ifconfig eth0 192.168.0.200 netmask 255.255.255.0 #<strong>临时</strong>配置eth0网卡的ip和子网掩码</li>
+</ul>
+<ol start="3">
+<li>Linux网络配置文件</li>
+</ol>
+<ul>
+<li>/etc/sysconfig/network-scripts/ifcfg-eth0：网卡信息文件</li>
+<li>/etc/sysconfig/network：主机名文件</li>
+<li>/etc/susconfig/resolv.conf:DNS配置文件</li>
+</ul>
+<ol start="4">
+<li>常用的网络命令</li>
+</ol>
+<ul>
+<li>ifconfig：查看与配置网络命令状态</li>
+<li>hostname：主机名</li>
+<li>ifdown/ifup：关闭与启动网卡</li>
+<li>netstat：查看网络状态<blockquote>
+<p>-t：列出TCP协议端口<br>-u：列出UDP协议端口<br>-n：不是用域名与服务名，而使用IP地址和端<br>l：仅列出在监听状态网络服务<br>a：列出所有的网络连接</p>
+</blockquote>
+</li>
+<li>route -n：查看路由列表（可以查看网关）</li>
+<li>nslookup [主机名或IP]:进行域名与IP地址解析</li>
+<li>ping：查看网络连接是否相同，底层是ICMP协议</li>
+<li>traceroute：路由查看命令，用来查看数据到达某个主机经过的路由地址</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/09/CS_Base/Linux/Linux笔记-网络基础/" rel="next" title="Linux笔记-网络基础">
+                <i class="fa fa-chevron-left"></i> Linux笔记-网络基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/10/CS_Base/C++/static关键字/" rel="prev" title="static关键字">
+                static关键字 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" src="/images/me.jpg" alt="JMing">
+  
+  <p class="site-author-name" itemprop="name">JMing</p>
+  <div class="site-description motion-element" itemprop="description">记录一些问题，反思一些问题，避免一些问题。</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+  <div class="links-of-author motion-element">
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/JMing15" title="GitHub &rarr; https://github.com/JMing15" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络模型"><span class="nav-number">1.</span> <span class="nav-text">网络模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP协议"><span class="nav-number">2.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP-UDP协议"><span class="nav-number">3.</span> <span class="nav-text">TCP/UDP协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的网络端口"><span class="nav-number">4.</span> <span class="nav-text">常见的网络端口</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JMing</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// GET RESPONSIVE HEIGHT PASSED FROM IFRAME
+
+window.addEventListener("message", function(e) {
+  var data = e.data;
+  if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
+    var featureID = data.split(':')[1];
+    var height = data.split(':')[2];
+    $(`iframe[data-feature=${featureID}]`).height(parseInt(height) + 30);
+  }
+}, false);
+</script>
+
+
+
+
+
+
+
+
+  
+
+</body>
+</html>

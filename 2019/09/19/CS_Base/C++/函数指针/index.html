@@ -128,7 +128,7 @@
 <meta property="og:site_name" content="JMing">
 <meta property="og:description" content="考虑如下的问题： 1234int foo()&amp;#123;    return 0;&amp;#125;  foo是一个函数的名称，但是函数foo是什么类型呢？函数拥有其左值类型，例如函数foo，它是一个返回值为int，参数为空的函数类型。与普通变量类似，函数也存在于一个带有地址的内存中。当一个函数被调用，执行跳转到被调用函数的地址，例如： 12345678910111213#include&amp;lt;iost">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T03:21:23.137Z">
+<meta property="og:updated_time" content="2019-10-25T01:03:28.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数指针">
 <meta name="twitter:description" content="考虑如下的问题： 1234int foo()&amp;#123;    return 0;&amp;#125;  foo是一个函数的名称，但是函数foo是什么类型呢？函数拥有其左值类型，例如函数foo，它是一个返回值为int，参数为空的函数类型。与普通变量类似，函数也存在于一个带有地址的内存中。当一个函数被调用，执行跳转到被调用函数的地址，例如： 12345678910111213#include&amp;lt;iost">
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-13 11:21:23" itemprop="dateModified" datetime="2019-10-13T11:21:23+08:00">2019-10-13</time>
+                <time title="修改时间：2019-10-25 09:03:28" itemprop="dateModified" datetime="2019-10-25T09:03:28+08:00">2019-10-25</time>
               </span>
             
           
@@ -472,7 +472,7 @@
 <p>5<br>  5</p>
 </blockquote>
 <h1 id="将一个函数作为另一个函数的参数"><a href="#将一个函数作为另一个函数的参数" class="headerlink" title="将一个函数作为另一个函数的参数"></a>将一个函数作为另一个函数的参数</h1><p>函数指针通常用在一个函数作为另个函数参数的情景。函数作为参数用于另一个函数通常称之为<strong>回调（callback functions）</strong>。</p>
-<p>考虑这样的情况，你希望编写一个函数（例如排序函数），该函数的特定部分由外部确定（升叙？降序？or others?），此处有一个排序函数：</p>
+<p>考虑这样的情况，你希望编写一个函数（例如排序函数），该函数的特定部分由外部确定（升序？降序？or others?），此处有一个排序函数：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectionSort</span><span class="params">(<span class="keyword">int</span> *<span class="built_in">array</span>, <span class="keyword">int</span> size)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> startIndex = <span class="number">0</span>; startIndex &lt; size; ++startIndex)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> smallestIndex = startIndex;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> currentIndex = startIndex + <span class="number">1</span>; currentIndex &lt; size; ++currentIndex)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">array</span>[smallestIndex] &gt; <span class="built_in">array</span>[currentIndex]) </span><br><span class="line">															</span><br><span class="line">				smallestIndex = currentIndex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">std</span>::swap(<span class="built_in">array</span>[startIndex], <span class="built_in">array</span>[smallestIndex]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>我们可以将其中大小比较部分用一下函数代替：</p>
@@ -617,7 +617,7 @@
         
           <a href="/archives">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

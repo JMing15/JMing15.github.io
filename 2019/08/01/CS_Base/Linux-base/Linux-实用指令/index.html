@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="一、指定运行级别 运行级别说明   0：关机 1：单用户（可用户找回丢失密码） 2：多用户状态（没有网络服务） 3：多用户状态（有网络服务） 4：系统未使用保留给用户 5：图形界面 6：系统重启 常用运行级别是3和5，要修改默认的运行级别可改文件 init 123456：进入指定运行级别     二、帮助指令 内部命令帮助help COMMAND  外部命令帮助COMMAND –help  命令手">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux-实用指令">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/CS_Base/Linux-base/Linux-实用指令/index.html">
+<meta property="og:site_name" content="JMing">
+<meta property="og:description" content="一、指定运行级别 运行级别说明   0：关机 1：单用户（可用户找回丢失密码） 2：多用户状态（没有网络服务） 3：多用户状态（有网络服务） 4：系统未使用保留给用户 5：图形界面 6：系统重启 常用运行级别是3和5，要修改默认的运行级别可改文件 init 123456：进入指定运行级别     二、帮助指令 内部命令帮助help COMMAND  外部命令帮助COMMAND –help  命令手">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-06T07:12:44.627Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux-实用指令">
+<meta name="twitter:description" content="一、指定运行级别 运行级别说明   0：关机 1：单用户（可用户找回丢失密码） 2：多用户状态（没有网络服务） 3：多用户状态（有网络服务） 4：系统未使用保留给用户 5：图形界面 6：系统重启 常用运行级别是3和5，要修改默认的运行级别可改文件 init 123456：进入指定运行级别     二、帮助指令 内部命令帮助help COMMAND  外部命令帮助COMMAND –help  命令手">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/08/01/CS_Base/Linux-base/Linux-实用指令/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>Linux-实用指令 | JMing</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JMing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Naive Coder</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/CS_Base/Linux-base/Linux-实用指令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JMing">
+      <meta itemprop="description" content="记录一些问题，反思一些问题，避免一些问题。">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JMing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux-实用指令
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-01 17:25:00" itemprop="dateCreated datePublished" datetime="2019-08-01T17:25:00+08:00">2019-08-01</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-06 15:12:44" itemprop="dateModified" datetime="2019-12-06T15:12:44+08:00">2019-12-06</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、指定运行级别"><a href="#一、指定运行级别" class="headerlink" title="一、指定运行级别"></a>一、指定运行级别</h1><ol>
+<li>运行级别说明</li>
+</ol>
+<ul>
+<li>0：关机</li>
+<li>1：单用户（可用户找回丢失密码）</li>
+<li>2：多用户状态（没有网络服务）</li>
+<li>3：多用户状态（有网络服务）</li>
+<li>4：系统未使用保留给用户</li>
+<li>5：图形界面</li>
+<li>6：系统重启<ul>
+<li>常用运行级别是3和5，要修改默认的运行级别可改文件</li>
+<li>init 123456：进入指定运行级别</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="二、帮助指令"><a href="#二、帮助指令" class="headerlink" title="二、帮助指令"></a>二、帮助指令</h1><ol>
+<li><p>内部命令帮助<br>help COMMAND</p>
+</li>
+<li><p>外部命令帮助<br>COMMAND –help</p>
+</li>
+<li><p>命令手册<br>man COMMAND<br>whatis COMMAND</p>
+</li>
+</ol>
+<p>man命令手册分章节</p>
+<ol>
+<li>用户命令</li>
+<li>系统调用</li>
+<li>库用户</li>
+<li>特殊文件（设备文件）</li>
+<li>文件格式（配置文件的语法）</li>
+<li>游戏</li>
+<li>杂项</li>
+<li>管理命令</li>
+</ol>
+<p>&lt;&gt;:必选<br>[]：可选<br>…：可以出现多次<br>|：多选一<br>{}：分组</p>
+<p>练习：使用date单独获取系统当前的年份、月份、日、小时、分钟、秒</p>
+<ul>
+<li><p>MAN：<br>  NAME:命令名称及功能简要说明<br>  SYNOPSIS:用法说明，包括可用选项<br>  DESCRIPTION:命令功能的详尽说明，可能包括每一个选项的意义<br>  OPTION:说明每一个选项的意义<br>  FILES:此命令相关的配置文件<br>  BUGS:<br>  EXAMPLES:<br>  SEE ALSO:</p>
+</li>
+<li><p>MAN的翻屏<br>  向前翻一屏：SPACE<br>  向后翻一屏：b<br>  向后翻一页：ENTER<br>  向前翻一页：k</p>
+</li>
+<li><p>MAN的查找<br>  /KEYWORD：向前<br>  ?KEYWORD：向后</p>
+<p>  n：下一个<br>  N：前一个</p>
+</li>
+<li><p>在线文档<br>  info COMMAND</p>
+</li>
+<li><p>文档<br>  /usr/share/doc</p>
+</li>
+</ul>
+<p>练习：echo是内部命令还是外部命令？其作用？如何换行显示？</p>
+<hr>
+<h1 id="三、文件目录类"><a href="#三、文件目录类" class="headerlink" title="三、文件目录类"></a>三、文件目录类</h1><ol>
+<li>pwd指令</li>
+</ol>
+<ul>
+<li>pwd：显示当前工作目录的绝对路径（print working directory）</li>
+</ul>
+<ol start="2">
+<li>ls指令</li>
+</ol>
+<ul>
+<li>ls 选项 目录or文件</li>
+<li>ls -a:显示当前目录的所有文件和目录，包括隐藏的</li>
+<li>ls -l：以列表的方式显示信息</li>
+</ul>
+<ol start="3">
+<li>cd指令</li>
+</ol>
+<ul>
+<li>cd 目录：切换到指定目录</li>
+<li>cd ~:切换到家目录</li>
+<li>cd ..:切换到当前目录的上一级目录</li>
+</ul>
+<ol start="4">
+<li>mkdir指令</li>
+</ol>
+<ul>
+<li>mkdir 目录：创建目标目录（make directory）</li>
+<li>mldir -p:创建多级目录（创建新的目录时，在其父目录不存在时先创建父目录）</li>
+</ul>
+<ol start="5">
+<li>rmdir指令</li>
+</ol>
+<ul>
+<li>rmdir 目录：删除空目录</li>
+<li>rmdir -rf 目录：删除非空目录</li>
+</ul>
+<ol start="6">
+<li>touch指令</li>
+</ol>
+<ul>
+<li>touch 文件名称：创建空文件</li>
+<li>touch可同时创建多个文件</li>
+</ul>
+<ol start="7">
+<li>cp指令</li>
+</ol>
+<ul>
+<li>cp 选项 source dest：拷贝源文件到目标位置</li>
+<li>cp -r：递归</li>
+<li>\cp 覆盖已经存在的文件</li>
+</ul>
+<ol start="8">
+<li>rm指令</li>
+</ol>
+<ul>
+<li>rm 选项 删除目标文件或目录</li>
+<li>rm -r 递归删除整个文件夹</li>
+<li>rm -f 强制删除不提示</li>
+</ul>
+<ol start="9">
+<li>mv指令</li>
+</ol>
+<ul>
+<li>mv oldfilename newfilename （重命名）</li>
+<li>mv /temp/movefile /targetFloder （移动文件）</li>
+</ul>
+<ol start="10">
+<li>cat指令</li>
+</ol>
+<ul>
+<li>cat 选项 目标文件：查看文件内容（只读）</li>
+<li>cat -n：显示行号</li>
+<li>cat只能浏览文件，而不能修改文件，为了便于浏览，一般会带上管道命令 | more</li>
+</ul>
+<ol start="11">
+<li>more指令</li>
+</ol>
+<ul>
+<li>more指令是一个基于vi编辑器的文本过滤器，它以全屏的方式按页显示文本的内容。more指令种内置了若干快捷键</li>
+<li>more 目标文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">空白键</td>
+<td align="center">向下翻一页</td>
+</tr>
+<tr>
+<td align="center">Enter</td>
+<td align="center">向下翻一行</td>
+</tr>
+<tr>
+<td align="center">q</td>
+<td align="center">立即离开more,不再显示该文件内容</td>
+</tr>
+<tr>
+<td align="center">Ctrl+f</td>
+<td align="center">向下滚动一屏</td>
+</tr>
+<tr>
+<td align="center">Ctrl+b</td>
+<td align="center">返回上一屏</td>
+</tr>
+<tr>
+<td align="center">=</td>
+<td align="center">输出当前行号</td>
+</tr>
+<tr>
+<td align="center">:f</td>
+<td align="center">输出文件名和当前行的行号</td>
+</tr>
+</tbody></table>
+<ol start="12">
+<li>less指令</li>
+</ol>
+<ul>
+<li>less指令用来分屏查看文件内容，它的功能与more指令类似，但是比more更加强大，支持各种显示终端。less指令在显示文件内容时，并不是一次将整个文件加载之后才显示，而是根据显示需要加载内容，对于显示大型文件具有较高的效率。</li>
+<li>less 目标文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">空白键/pagedown</td>
+<td align="center">向下翻一页</td>
+</tr>
+<tr>
+<td align="center">pageup</td>
+<td align="center">向上翻一页</td>
+</tr>
+<tr>
+<td align="center">/字串</td>
+<td align="center">向下搜寻目标字串的功能：n：向下查找；N：向上查找</td>
+</tr>
+<tr>
+<td align="center">?字串</td>
+<td align="center">向上搜寻目标字串的功能：n：向下查找；N：向上查找</td>
+</tr>
+<tr>
+<td align="center">q</td>
+<td align="center">离开less</td>
+</tr>
+</tbody></table>
+<ol start="13">
+<li><blockquote>
+<p>指令（输出重定向）和&gt;&gt;指令（追加）</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>ls -l&gt;文件 (功能描述：列表的内容写入目标文件中（覆盖写）)</li>
+<li>ls -l&gt;&gt;文件（列表的内容追加到目标文件（追加写））</li>
+<li>cat 文件1&gt;文件2（将文件1的内容覆盖到文件2）</li>
+<li>echo “内容”&gt;&gt;文件 （将内容追加到目标文件）</li>
+</ul>
+<ol start="14">
+<li>echo指令（输出内容到控制台）</li>
+</ol>
+<ul>
+<li>echo 选项 输出内容 </li>
+</ul>
+<ol start="15">
+<li>head指令（显示文件的开头内容部分，默认情况下head指令显示文件的前10页内容）</li>
+</ol>
+<ul>
+<li>head 文件（查看文件头10行内容）</li>
+<li>head -n 5 文件 （查看文件头5行内容，5可以是任意数）</li>
+</ul>
+<ol start="16">
+<li>tail指令（输出文件中尾部的内容，默认情况下tail指令显示文件的后10行内容）</li>
+</ol>
+<ul>
+<li>tail 文件（查看文件尾10行内容）</li>
+<li>tail -n 5 文件（查看文件尾5行内容，5可以是任意数）</li>
+<li>tail -f 文件（实时追踪该文档的所有更新）</li>
+</ul>
+<ol start="17">
+<li>ln指令（软链接也叫符号链接，类似与windows的快捷方式，主要存放了链接其他文件的路径）</li>
+</ol>
+<ul>
+<li>ln -s 源文件or目录 软链接名（给源文件创建一个软链接）</li>
+</ul>
+<ol start="18">
+<li>history指令（查看已经执行过历史命令）</li>
+</ol>
+<ul>
+<li>history （查看已经执行过的历史指令）</li>
+<li>history 10（查看已经执行过的10个历史指令）</li>
+<li>!n（执行编号为n的指令）</li>
+</ul>
+<ol start="19">
+<li>date（显示当前日期）</li>
+</ol>
+<ul>
+<li>date （显示当前时间）</li>
+<li>date %Y （显示当前年份）</li>
+<li>date %m （显示当前月份）</li>
+<li>date %d （显示当前是哪一天）</li>
+<li>date %y-%m-%d %h:%m:%s （显示年月日时分秒）</li>
+<li>date -s 字符串时间 （设置系统当前时间）</li>
+</ul>
+<ol start="20">
+<li>cal（查看日历指令）</li>
+</ol>
+<ul>
+<li>cal 选项 （不加选项，显示本月日历）</li>
+</ul>
+<ol start="21">
+<li>find指令（从指定目录下递归地遍历其各个子目录，其满足条件的文件或目录显示在终端）</li>
+</ol>
+<ul>
+<li>find 搜索范围 选项</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">name 文件名</td>
+<td align="center">按照指定的文件名查找模式查找文件</td>
+</tr>
+<tr>
+<td align="center">user 用户名</td>
+<td align="center">查找属于指定用户名所有文件</td>
+</tr>
+<tr>
+<td align="center">size（+n大于 -n小于 n等于） 文件大小</td>
+<td align="center">按照指定的文件大小查找文件</td>
+</tr>
+</tbody></table>
+<ol start="22">
+<li>locate指令（快速定位文件路径，利用事先建立的系统中所有文件名称及路径的locate数据库事先快速定位给定文件。locate无需遍历真个文件系统，查询速度快。为了保证查询结果的准确度，管理员必须定期更新locate时刻）</li>
+</ol>
+<ul>
+<li>locate 搜索文件 （由于locate指定基于数据库进行查询，所以第一次运行前，必须使用updatedb指令创建locate数据库）</li>
+</ul>
+<ol start="23">
+<li>grep指令和管道符号（grep过滤查找，管道符”|”，表示将前一个命令的处理结果输出传递给后面的命令处理）</li>
+</ol>
+<ul>
+<li>grep 选项 查找内容</li>
+<li>grep -n 显示匹配行及行号</li>
+<li>grep -i 忽略字母大小写</li>
+</ul>
+<ol start="24">
+<li>压缩和解压</li>
+</ol>
+<ul>
+<li><p>gzip/gunzip （gzip用于压缩文件，gunzip用于解压缩文件）</p>
+</li>
+<li><p>gzip 文件名 （压缩文件，只能将文件压缩为*.gz文件，当使用gzip压缩后，原文件不保留）</p>
+</li>
+<li><p>gunzip 文件名.gz （解压缩文件）</p>
+</li>
+<li><p>zip/unzip （zip用于压缩文件，unzip用于解压缩文件）</p>
+</li>
+<li><p>zip 选项 文件.zip  目标</p>
+</li>
+<li><p>unzip  选项 文件.zip</p>
+</li>
+<li><p>zip -r：递归压缩，即压缩目录</p>
+</li>
+<li><p>unzip -d：指定解压后文件的存放目录</p>
+</li>
+<li><p>tar 打包指令，最后打包后的文件是.tar.gz文件</p>
+</li>
+<li><p>tar 选项 文件.tar.gz 打包内容</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-c</td>
+<td align="center">产生.tar打包文件</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示详细信息</td>
+</tr>
+<tr>
+<td align="center">-f</td>
+<td align="center">指定压缩后的文件名</td>
+</tr>
+<tr>
+<td align="center">-z</td>
+<td align="center">打包同时压缩</td>
+</tr>
+<tr>
+<td align="center">-x</td>
+<td align="center">解包.tar文件</td>
+</tr>
+</tbody></table>
+<h1 id="四、任务调度基本说明"><a href="#四、任务调度基本说明" class="headerlink" title="四、任务调度基本说明"></a>四、任务调度基本说明</h1><ul>
+<li><p>crontab [选项]：进行定时任务的设置</p>
+<blockquote>
+<p>crontab -e：编辑<br>crontab -l：显示<br>crontab -r：删除</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">含义</th>
+<th align="center">范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">第一个*</td>
+<td align="center">分钟</td>
+<td align="center">0-59</td>
+</tr>
+<tr>
+<td align="center">第二个*</td>
+<td align="center">小时</td>
+<td align="center">0-23</td>
+</tr>
+<tr>
+<td align="center">第三个*</td>
+<td align="center">天</td>
+<td align="center">0-31</td>
+</tr>
+<tr>
+<td align="center">第四个*</td>
+<td align="center">月</td>
+<td align="center">1-12</td>
+</tr>
+<tr>
+<td align="center">第五个*</td>
+<td align="center">周几</td>
+<td align="center">0-7</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*</td>
+<td align="center">代表任何时间</td>
+</tr>
+<tr>
+<td align="center">,</td>
+<td align="center">代表不连续时间，例如：0 8,12,16 * * *代表每天8:00 12:00 :16:00执行一次</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">代表连续的时间，例如：0 5 * * 1-6，代表周一到周六的5:00执行一次</td>
+</tr>
+<tr>
+<td align="center">*/n</td>
+<td align="center">代表每隔多久执行一次，例如 */10 * * * *,代表每隔10分钟执行一次</td>
+</tr>
+</tbody></table>
+<h1 id="五、磁盘分区和挂载"><a href="#五、磁盘分区和挂载" class="headerlink" title="五、磁盘分区和挂载"></a>五、磁盘分区和挂载</h1><h2 id="mrb分区"><a href="#mrb分区" class="headerlink" title="mrb分区"></a>mrb分区</h2></li>
+<li><p>最多只支持四个主分区</p>
+</li>
+<li><p>系统只能安装在主分区</p>
+</li>
+<li><p>扩展分区要占一个主分区</p>
+</li>
+<li><p>MBR最大只支持2TB，但拥有最好的兼容性</p>
+<h2 id="gtp分区"><a href="#gtp分区" class="headerlink" title="gtp分区"></a>gtp分区</h2></li>
+<li><p>支持无限多个分区</p>
+</li>
+<li><p>最大支持18EB的最大容量</p>
+</li>
+<li><p>windows7 x64后支持gtp、</p>
+</li>
+</ul>
+<h1 id="六、vi和vim编辑器的使用"><a href="#六、vi和vim编辑器的使用" class="headerlink" title="六、vi和vim编辑器的使用"></a>六、vi和vim编辑器的使用</h1><ol>
+<li>普通模式、插入/编辑模式、命令行模式切换</li>
+</ol>
+<ul>
+<li>vim xxx 进入普通模式</li>
+<li>i或者a 普通模式进入编辑模式 </li>
+<li>ESC 编辑模式进入普通模式</li>
+<li>:或者/ 普通模式进入命令模式（wq:保存退出 q:退出 q!:强制退出）</li>
+<li>ESC命令模式进入普通模式</li>
+</ul>
+<ol start="2">
+<li>vi和vim快捷键</li>
+</ol>
+<ul>
+<li>yy:拷贝当前行,Nyy:拷贝当前行下的N行</li>
+<li>p:粘贴</li>
+<li>dd:删除当前行,Ndd：删除当前行下的N行</li>
+<li>普通模式下[/目标文本]:在文件中查找某个单词</li>
+<li>set nu/set nonu:设置/取消文件行号</li>
+<li>G/gg：到达文件最末行/大道文件首行</li>
+<li>u：撤销</li>
+<li>普通模式下[N+SHIFT+G]:光标移动到第N行</li>
+</ul>
+<hr>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/01/CS_Base/Linux-base/Linux-用户管理/" rel="next" title="Linux-用户管理">
+                <i class="fa fa-chevron-left"></i> Linux-用户管理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/01/CS_Base/Computer_Network/网络层/" rel="prev" title="网络层">
+                网络层 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" src="/images/me.jpg" alt="JMing">
+  
+  <p class="site-author-name" itemprop="name">JMing</p>
+  <div class="site-description motion-element" itemprop="description">记录一些问题，反思一些问题，避免一些问题。</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+  <div class="links-of-author motion-element">
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/JMing15" title="GitHub &rarr; https://github.com/JMing15" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、指定运行级别"><span class="nav-number">1.</span> <span class="nav-text">一、指定运行级别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、帮助指令"><span class="nav-number">2.</span> <span class="nav-text">二、帮助指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、文件目录类"><span class="nav-number">3.</span> <span class="nav-text">三、文件目录类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、任务调度基本说明"><span class="nav-number">4.</span> <span class="nav-text">四、任务调度基本说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、磁盘分区和挂载"><span class="nav-number">5.</span> <span class="nav-text">五、磁盘分区和挂载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mrb分区"><span class="nav-number">5.1.</span> <span class="nav-text">mrb分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gtp分区"><span class="nav-number">5.2.</span> <span class="nav-text">gtp分区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、vi和vim编辑器的使用"><span class="nav-number">6.</span> <span class="nav-text">六、vi和vim编辑器的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JMing</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// GET RESPONSIVE HEIGHT PASSED FROM IFRAME
+
+window.addEventListener("message", function(e) {
+  var data = e.data;
+  if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
+    var featureID = data.split(':')[1];
+    var height = data.split(':')[2];
+    $(`iframe[data-feature=${featureID}]`).height(parseInt(height) + 30);
+  }
+}, false);
+</script>
+
+
+
+
+
+
+
+
+  
+
+</body>
+</html>

@@ -120,19 +120,20 @@
   };
 </script>
 
-  <meta name="description" content="title IO多路复用date 2020-07-08 163201categorries CS Basetags    OS  Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。 典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口l">
+  <meta name="description" content="Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。 典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口listen后，在accept调用堵塞，直到某个客户端发起连接。BIO，‘B’代表blocking，阻塞，服务端开发中，服务端调用li">
+<meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JMing">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/IO多路复用/index.html">
+<meta property="og:title" content="IO多路复用">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/IO多路复用/index.html">
 <meta property="og:site_name" content="JMing">
-<meta property="og:description" content="title IO多路复用date 2020-07-08 163201categorries CS Basetags    OS  Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。 典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口l">
+<meta property="og:description" content="Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。 典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口listen后，在accept调用堵塞，直到某个客户端发起连接。BIO，‘B’代表blocking，阻塞，服务端开发中，服务端调用li">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2020/07/08/IO多路复用/.IO_Multiplexing.png">
-<meta property="og:updated_time" content="2020-07-08T09:32:42.914Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/26/IO多路复用/.IO_Multiplexing.png">
+<meta property="og:updated_time" content="2020-07-08T09:36:33.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMing">
-<meta name="twitter:description" content="title IO多路复用date 2020-07-08 163201categorries CS Basetags    OS  Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。 典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口l">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/08/IO多路复用/.IO_Multiplexing.png">
+<meta name="twitter:title" content="IO多路复用">
+<meta name="twitter:description" content="Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。 典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口listen后，在accept调用堵塞，直到某个客户端发起连接。BIO，‘B’代表blocking，阻塞，服务端开发中，服务端调用li">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/26/IO多路复用/.IO_Multiplexing.png">
 
 
 
@@ -140,7 +141,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/07/08/IO多路复用/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/26/IO多路复用/">
 
 
 
@@ -151,7 +152,7 @@
 </script>
 
   
-  <title> | JMing</title>
+  <title>IO多路复用 | JMing</title>
   
 
 
@@ -346,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/08/IO多路复用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/IO多路复用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JMing">
@@ -363,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">IO多路复用
 
               
             
@@ -389,13 +390,23 @@
                 
               
 
-              <time title="创建时间：2020-07-08 17:32:11 / 修改时间：17:32:42" itemprop="dateCreated datePublished" datetime="2020-07-08T17:32:11+08:00">2020-07-08</time>
+              <time title="创建时间：2019-07-26 09:03:19" itemprop="dateCreated datePublished" datetime="2019-07-26T09:03:19+08:00">2019-07-26</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-08 17:36:33" itemprop="dateModified" datetime="2020-07-08T17:36:33+08:00">2020-07-08</time>
+              </span>
             
           
 
@@ -433,11 +444,8 @@
       
 
       
-        <hr>
-<p>title IO多路复用<br>date 2020-07-08 163201<br>categorries CS Base<br>tags<br>    OS</p>
-<hr>
-<p>Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。</p>
-<p>典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口listen后，在accept调用堵塞，直到某个客户端发起连接。<br><img src="/2020/07/08/IO多路复用/.IO_Multiplexing.png" alt><br>BIO，‘B’代表blocking，阻塞，服务端开发中，服务端调用listen对某个端口进行监听，然后调用accept等待客户端连接，accept返回前会阻塞当前主进程，当收到accept返回后，服务端就会拿到一个与客户端连接的socket，之后服务端可以针对这个socket进行read和write操作，但是对socket的读写都会阻塞当前进程。</p>
+        <p>Linux操作系统的一个基本概念是一切皆文件，每个进程都有一个文件描述符表，表中的文件描述符指向文件、socket、设备以及其它的操作系统对象。</p>
+<p>典型的与许多IO源一起工作的操作系统，都会经历一个初始化阶段，然后进入等待模式，比如socket通信，服务端在对某个端口listen后，在accept调用堵塞，直到某个客户端发起连接。<br><img src="/2019/07/26/IO多路复用/.IO_Multiplexing.png" alt><br>BIO，‘B’代表blocking，阻塞，服务端开发中，服务端调用listen对某个端口进行监听，然后调用accept等待客户端连接，accept返回前会阻塞当前主进程，当收到accept返回后，服务端就会拿到一个与客户端连接的socket，之后服务端可以针对这个socket进行read和write操作，但是对socket的读写都会阻塞当前进程。</p>
 <p>因此可以采用多线程方案，但是多线程方案难易达到C10K，即①客户端数量过多导致线程数过多；②线程的上下文切换导致操作系统性能消耗增加。</p>
 <p>因此BIO无法解决客户端数量过多的应用情景。</p>
 <h1 id="IO多路复用"><a href="#IO多路复用" class="headerlink" title="IO多路复用"></a>IO多路复用</h1><p>BIO问题的解决方法是使用一套内核机制对一组文件描述符进行轮询，在Linux中，有三个函数可以使用：</p>
@@ -518,6 +526,15 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/OS/" rel="tag"># OS</a>
+          
+        </div>
+      
 
       
       
@@ -527,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/08/CS_Base/OS/死锁/" rel="next" title="死锁">
-                <i class="fa fa-chevron-left"></i> 死锁
+              <a href="/2019/07/08/CS_Base/OS/内存对齐/" rel="next" title="内存对齐">
+                <i class="fa fa-chevron-left"></i> 内存对齐
               </a>
             
           </div>
@@ -536,6 +553,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/26/TCP三次握手和四次挥手/" rel="prev" title="TCP三次握手和四次挥手">
+                TCP三次握手和四次挥手 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>

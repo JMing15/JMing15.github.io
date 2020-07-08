@@ -120,18 +120,18 @@
   };
 </script>
 
-  <meta name="description" content="Shell是什么？Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至编写一些程序。 基本语法变量 定义变量：变量=值 撤销变量：unset 变量 声明静态变量：readonly 变量，注意：不能unset  注释 #!我被注释了 :&amp;lt;&amp;lt;!  我被注释了  !变量定义规则 变量名称可以有字母、数">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="为什么需要inline函数：普通函数执行需要一定的性能花销（栈的切换），如果函数体较大且执行频率不频繁，这些性能消耗可以忽略不计，但是如果对于小型的常用函数，这种性能消耗就不能忽略。将函数声明为inline，编译器将该函数视为inline函数，当编译器编译到此函数的调用时，会就地展开该inline函数，因此可以避免函数切换带来的性能消耗。 inline函数的缺点这种就地展开的方式虽然降低了函数切换">
+<meta name="keywords" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-Shell编程">
-<meta property="og:url" content="http://yoursite.com/2019/10/05/CS_Base/Linux-base/Linux-Shell编程/index.html">
+<meta property="og:title" content="inline函数">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/CS_Base/C++/inline函数/index.html">
 <meta property="og:site_name" content="JMing">
-<meta property="og:description" content="Shell是什么？Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至编写一些程序。 基本语法变量 定义变量：变量=值 撤销变量：unset 变量 声明静态变量：readonly 变量，注意：不能unset  注释 #!我被注释了 :&amp;lt;&amp;lt;!  我被注释了  !变量定义规则 变量名称可以有字母、数">
+<meta property="og:description" content="为什么需要inline函数：普通函数执行需要一定的性能花销（栈的切换），如果函数体较大且执行频率不频繁，这些性能消耗可以忽略不计，但是如果对于小型的常用函数，这种性能消耗就不能忽略。将函数声明为inline，编译器将该函数视为inline函数，当编译器编译到此函数的调用时，会就地展开该inline函数，因此可以避免函数切换带来的性能消耗。 inline函数的缺点这种就地展开的方式虽然降低了函数切换">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-15T01:42:18.878Z">
+<meta property="og:updated_time" content="2020-07-08T08:20:34.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux-Shell编程">
-<meta name="twitter:description" content="Shell是什么？Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至编写一些程序。 基本语法变量 定义变量：变量=值 撤销变量：unset 变量 声明静态变量：readonly 变量，注意：不能unset  注释 #!我被注释了 :&amp;lt;&amp;lt;!  我被注释了  !变量定义规则 变量名称可以有字母、数">
+<meta name="twitter:title" content="inline函数">
+<meta name="twitter:description" content="为什么需要inline函数：普通函数执行需要一定的性能花销（栈的切换），如果函数体较大且执行频率不频繁，这些性能消耗可以忽略不计，但是如果对于小型的常用函数，这种性能消耗就不能忽略。将函数声明为inline，编译器将该函数视为inline函数，当编译器编译到此函数的调用时，会就地展开该inline函数，因此可以避免函数切换带来的性能消耗。 inline函数的缺点这种就地展开的方式虽然降低了函数切换">
 
 
 
@@ -139,7 +139,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/10/05/CS_Base/Linux-base/Linux-Shell编程/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/12/CS_Base/C++/inline函数/">
 
 
 
@@ -150,7 +150,7 @@
 </script>
 
   
-  <title>Linux-Shell编程 | JMing</title>
+  <title>inline函数 | JMing</title>
   
 
 
@@ -345,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/05/CS_Base/Linux-base/Linux-Shell编程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/CS_Base/C++/inline函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JMing">
@@ -362,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux-Shell编程
+          <h1 class="post-title" itemprop="name headline">inline函数
 
               
             
@@ -388,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2019-10-05 09:53:24" itemprop="dateCreated datePublished" datetime="2019-10-05T09:53:24+08:00">2019-10-05</time>
+              <time title="创建时间：2019-10-12 21:59:20" itemprop="dateCreated datePublished" datetime="2019-10-12T21:59:20+08:00">2019-10-12</time>
             </span>
           
 
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-11-15 09:42:18" itemprop="dateModified" datetime="2019-11-15T09:42:18+08:00">2019-11-15</time>
+                <time title="修改时间：2020-07-08 16:20:34" itemprop="dateModified" datetime="2020-07-08T16:20:34+08:00">2020-07-08</time>
               </span>
             
           
@@ -442,60 +442,11 @@
       
 
       
-        <h1 id="Shell是什么？"><a href="#Shell是什么？" class="headerlink" title="Shell是什么？"></a>Shell是什么？</h1><p>Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至编写一些程序。</p>
-<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li>定义变量：变量=值</li>
-<li>撤销变量：unset 变量</li>
-<li>声明静态变量：readonly 变量，注意：不能unset</li>
-</ul>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ul>
-<li>#!我被注释了</li>
-<li>:&lt;&lt;!  我被注释了  !<h2 id="变量定义规则"><a href="#变量定义规则" class="headerlink" title="变量定义规则"></a>变量定义规则</h2></li>
-<li>变量名称可以有字母、数字、下划线组成，但是不能以数字开头</li>
-<li>等号两侧不能有空格</li>
-<li>变量名称一般习惯大写<h2 id="将命令的返回值赋给变量"><a href="#将命令的返回值赋给变量" class="headerlink" title="将命令的返回值赋给变量"></a>将命令的返回值赋给变量</h2></li>
-<li>A=<code>ls -l</code>，运行反引号里面的命令，并把结果返回值赋给变量A</li>
-<li>A=$(ls -l)，等价于反引号</li>
-</ul>
-<h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><ul>
-<li>export 变量名=值：将shell变量输出为环境变量</li>
-<li>source 配置文件：让修改过的配置信息立即生效</li>
-<li>echo $变量名：查询环境变量的值</li>
-</ul>
-<h2 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a>预定义变量</h2><ul>
-<li>$$ 当前进程的进程号PID</li>
-<li>$! 后台运行的最后一个进程的进程号PID</li>
-<li>$? 最后一次执行命令的返回状态。如果这个变量的值为0，证明上一个命令被执行；如果这个变量非0（具体为何值，由命令自身决定），则证明上一个命令执行不正确</li>
-</ul>
-<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><ul>
-<li>$((运算式)) $[运算式]</li>
-<li>expr *,/.%</li>
-</ul>
-<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><ul>
-<li><p>[ condition ] condition前后有空格</p>
-</li>
-<li><p>字符串比较<br>  =</p>
-</li>
-<li><p>两个整数的比较<br>  -lt 小于<br>  -le 小于等于<br>  -eq 等于<br>  -gt 大于<br>  -ge 大于等于<br>  -ne 不等于</p>
-</li>
-<li><p>按照文件权限进行判断<br>  -r 有读权限<br>  -w 有写权限<br>  -x 有执行权限</p>
-</li>
-<li><p>按照文件类型进行判断<br>  -f 文件存在并且是一个常规文件<br>  -e 文件存在<br>  -d 文件存在并是一个目录</p>
-</li>
-</ul>
-<h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><p>if [ 条件判断式 ]<br>    then<br>        程序<br>    elif<br>        程序<br>fi</p>
-<h2 id="case"><a href="#case" class="headerlink" title="case"></a>case</h2><p>case $变量名 in<br>    “value 1”)<br>        程序1<br>    ;;<br>    “value 2”)<br>        程序2<br>    ;;<br>    *)<br>    ;;<br>esac  </p>
-<h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><p>for 变量 in value1 value2 value3<br>do<br>    程序<br>done</p>
-<p>或者<br>for((初始值，循环控制条件；变量变化))<br>do<br>    程序<br>done</p>
-<h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><p>while [ 条件判断式 ]<br>do<br>    程序<br>done</p>
-<h2 id="read读取控制台输入"><a href="#read读取控制台输入" class="headerlink" title="read读取控制台输入"></a>read读取控制台输入</h2><p>read(选项)[参数]<br>选项:<br>-p:指定读取值时的提示符<br>-t:指定读取值时的等待时间(秒)，如果指定时间内没有输入，停止等待<br>变量：指定读取值的变量名</p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
-<li>系统函数<br>basename:返回完整路径最后/的部分，常用语获取文件名<br>basename[pathname][suffix]<br>basename[string][suffix]</li>
-</ul>
-<p>dirname:返回完整路径最后/的前面部分，常用语返回路径部分</p>
-<ul>
-<li>自定义函数<br>function funcname()<br>{<br>  Action;<br>  [return int;]<br>}<br>调用直接写函数名：funcname[值]</li>
-</ul>
+        <h1 id="为什么需要inline函数："><a href="#为什么需要inline函数：" class="headerlink" title="为什么需要inline函数："></a>为什么需要inline函数：</h1><p>普通函数执行需要一定的性能花销（栈的切换），如果函数体较大且执行频率不频繁，这些性能消耗可以忽略不计，但是如果对于小型的常用函数，这种性能消耗就不能忽略。将函数声明为inline，编译器将该函数视为inline函数，当编译器编译到此函数的调用时，会就地展开该inline函数，因此可以避免函数切换带来的性能消耗。</p>
+<h1 id="inline函数的缺点"><a href="#inline函数的缺点" class="headerlink" title="inline函数的缺点"></a>inline函数的缺点</h1><p>这种就地展开的方式虽然降低了函数切换带来的性能损耗，但也同时增加了函数体的大小，尤其是在inline函数体很长或者inline函数在多个位置调用的情况。</p>
+<p>现代编译器通常将inline视为一种建议，会智能将函数视为inline或者普通函数。</p>
+<h1 id="inline函数与普通函数的不同"><a href="#inline函数与普通函数的不同" class="headerlink" title="inline函数与普通函数的不同"></a>inline函数与普通函数的不同</h1><p>普通函数不可以在.h中定义，否则在多个.cpp包含该.h的情况下，造成重定义的错误。但是内联函数不受此条约的限制，因为inline函数不会真正地被编译，而是就地展开。</p>
+<p>但是依然不建议在.h中定义inline函数。</p>
 
       
     </div>
@@ -526,7 +477,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/C/" rel="tag"># C++</a>
           
         </div>
       
@@ -539,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/04/CS_Base/Linux-base/Linux-软件下载/" rel="next" title="Linux-软件下载">
-                <i class="fa fa-chevron-left"></i> Linux-软件下载
+              <a href="/2019/10/05/CS_Base/Linux-base/Linux-Shell编程/" rel="next" title="Linux-Shell编程">
+                <i class="fa fa-chevron-left"></i> Linux-Shell编程
               </a>
             
           </div>
@@ -549,8 +500,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/12/CS_Base/C++/inline函数/" rel="prev" title="inline函数">
-                inline函数 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/14/CS_Base/C++/内存安全/" rel="prev" title="内存安全">
+                内存安全 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -721,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell是什么？"><span class="nav-number">1.</span> <span class="nav-text">Shell是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本语法"><span class="nav-number">2.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">2.1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">2.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量定义规则"><span class="nav-number">2.3.</span> <span class="nav-text">变量定义规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将命令的返回值赋给变量"><span class="nav-number">2.4.</span> <span class="nav-text">将命令的返回值赋给变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置环境变量"><span class="nav-number">2.5.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预定义变量"><span class="nav-number">2.6.</span> <span class="nav-text">预定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算"><span class="nav-number">2.7.</span> <span class="nav-text">运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断语句"><span class="nav-number">2.8.</span> <span class="nav-text">判断语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if"><span class="nav-number">2.9.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case"><span class="nav-number">2.10.</span> <span class="nav-text">case</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for"><span class="nav-number">2.11.</span> <span class="nav-text">for</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while"><span class="nav-number">2.12.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#read读取控制台输入"><span class="nav-number">2.13.</span> <span class="nav-text">read读取控制台输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">2.14.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么需要inline函数："><span class="nav-number">1.</span> <span class="nav-text">为什么需要inline函数：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#inline函数的缺点"><span class="nav-number">2.</span> <span class="nav-text">inline函数的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#inline函数与普通函数的不同"><span class="nav-number">3.</span> <span class="nav-text">inline函数与普通函数的不同</span></a></li></ol></div>
             
 
           </div>

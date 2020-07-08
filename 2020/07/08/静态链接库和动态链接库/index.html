@@ -120,20 +120,22 @@
   };
 </script>
 
-  <meta name="description" content="进程内存空间分布进程的内存空间分为5个部分，从低地址到高地址依次为代码段(text)，初始化数据段(initialize data) ，未初始化数据段(uninitialize data)，堆(heap)，共享库的存储区映射，栈区(stack)。 代码段代码段又叫文本段，是一个程序在内存中或对象文件中的一部分，其中包含可执行指令。作为一个内存区域，为了防止堆栈溢出导致其覆盖，一般将其放在内存的低地">
+  <meta name="description" content="转载至：Linux 中的动态链接库和静态链接库是干什么的？ - wuxinliulei的回答 - 知乎https://www.zhihu.com/question/20484931/answer/69553616 库是写好的、现有的、成熟的、可以复用的代码。现实中每个程序猿都要依赖很多基础的底层库，不可能每个项目都要重复造轮子，因此库的存在有着实际的意义。 本质上来说库是一种可执行代码的二进制形式">
 <meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="进程空间">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/CS_Base/OS/进程空间/index.html">
+<meta property="og:title" content="静态链接库和动态链接库">
+<meta property="og:url" content="http://yoursite.com/2020/07/08/静态链接库和动态链接库/index.html">
 <meta property="og:site_name" content="JMing">
-<meta property="og:description" content="进程内存空间分布进程的内存空间分为5个部分，从低地址到高地址依次为代码段(text)，初始化数据段(initialize data) ，未初始化数据段(uninitialize data)，堆(heap)，共享库的存储区映射，栈区(stack)。 代码段代码段又叫文本段，是一个程序在内存中或对象文件中的一部分，其中包含可执行指令。作为一个内存区域，为了防止堆栈溢出导致其覆盖，一般将其放在内存的低地">
+<meta property="og:description" content="转载至：Linux 中的动态链接库和静态链接库是干什么的？ - wuxinliulei的回答 - 知乎https://www.zhihu.com/question/20484931/answer/69553616 库是写好的、现有的、成熟的、可以复用的代码。现实中每个程序猿都要依赖很多基础的底层库，不可能每个项目都要重复造轮子，因此库的存在有着实际的意义。 本质上来说库是一种可执行代码的二进制形式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2020/07/08/CS_Base/OS/进程空间/process_mem_space.png">
-<meta property="og:updated_time" content="2020-07-08T08:40:48.247Z">
+<meta property="og:image" content="http://yoursite.com/2020/07/08/静态链接库和动态链接库/static_dynamic_lib1.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/08/静态链接库和动态链接库/static_dynamic_lib2.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/08/静态链接库和动态链接库/static_dynamic_lib3.png">
+<meta property="og:updated_time" content="2020-07-08T09:31:47.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="进程空间">
-<meta name="twitter:description" content="进程内存空间分布进程的内存空间分为5个部分，从低地址到高地址依次为代码段(text)，初始化数据段(initialize data) ，未初始化数据段(uninitialize data)，堆(heap)，共享库的存储区映射，栈区(stack)。 代码段代码段又叫文本段，是一个程序在内存中或对象文件中的一部分，其中包含可执行指令。作为一个内存区域，为了防止堆栈溢出导致其覆盖，一般将其放在内存的低地">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/08/CS_Base/OS/进程空间/process_mem_space.png">
+<meta name="twitter:title" content="静态链接库和动态链接库">
+<meta name="twitter:description" content="转载至：Linux 中的动态链接库和静态链接库是干什么的？ - wuxinliulei的回答 - 知乎https://www.zhihu.com/question/20484931/answer/69553616 库是写好的、现有的、成熟的、可以复用的代码。现实中每个程序猿都要依赖很多基础的底层库，不可能每个项目都要重复造轮子，因此库的存在有着实际的意义。 本质上来说库是一种可执行代码的二进制形式">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/08/静态链接库和动态链接库/static_dynamic_lib1.png">
 
 
 
@@ -141,7 +143,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/07/08/CS_Base/OS/进程空间/">
+  <link rel="canonical" href="http://yoursite.com/2020/07/08/静态链接库和动态链接库/">
 
 
 
@@ -152,7 +154,7 @@
 </script>
 
   
-  <title>进程空间 | JMing</title>
+  <title>静态链接库和动态链接库 | JMing</title>
   
 
 
@@ -347,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/08/CS_Base/OS/进程空间/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/08/静态链接库和动态链接库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JMing">
@@ -364,7 +366,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">进程空间
+          <h1 class="post-title" itemprop="name headline">静态链接库和动态链接库
 
               
             
@@ -390,7 +392,7 @@
                 
               
 
-              <time title="创建时间：2020-07-08 16:31:44 / 修改时间：16:40:48" itemprop="dateCreated datePublished" datetime="2020-07-08T16:31:44+08:00">2020-07-08</time>
+              <time title="创建时间：2020-07-08 16:31:19 / 修改时间：17:31:47" itemprop="dateCreated datePublished" datetime="2020-07-08T16:31:19+08:00">2020-07-08</time>
             </span>
           
 
@@ -434,24 +436,43 @@
       
 
       
-        <h1 id="进程内存空间分布"><a href="#进程内存空间分布" class="headerlink" title="进程内存空间分布"></a>进程内存空间分布</h1><p>进程的内存空间分为5个部分，<strong>从低地址到高地址</strong>依次为代码段(text)，初始化数据段(initialize data) ，未初始化数据段(uninitialize data)，堆(heap)，共享库的存储区映射，栈区(stack)。<br><img src="/2020/07/08/CS_Base/OS/进程空间/process_mem_space.png" alt="进程内存空间分布"></p>
-<h2 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h2><p>代码段又叫文本段，是一个程序在内存中或对象文件中的一部分，其中包含可执行指令。作为一个内存区域，为了防止堆栈溢出导致其覆盖，一般将其放在内存的低地址处。</p>
-<h2 id="已初始化数据段"><a href="#已初始化数据段" class="headerlink" title="已初始化数据段"></a>已初始化数据段</h2><p>已初始化的数据段，通常也被称为数据段，是一个程序虚拟地址空间中一部分，通常用来存储已经初始化的全局变量、静态变量。</p>
-<p>需要注意的是，已初始化数据段不是只读，因为全局变量和静态变量在运行期间是可以修改的。</p>
-<p>初始化数据段可以进一步被分为只读数据区、可读写数据区。</p>
-<p>例如：<br>全局变量char s[]=”hello world”，存储在可读写区<br>全局变量const *str=”hello world”，需要分为两个部分来看，其中”hello world”存储在只读区，<br>指针str存储在读写区</p>
-<h2 id="未初始化数据段"><a href="#未初始化数据段" class="headerlink" title="未初始化数据段"></a>未初始化数据段</h2><p>未初始化的数据段，通常也被成为bss段，在程序运行之前，该数据段中的数据被内核初始化为0。该数据段起始于已初始化数据段的末端，包含未被显式初试化或被初始化为0的static变量、全局变量。</p>
-<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>动态申请的内存位于堆中，堆起始于bss段的末端，地址增长的方向是从低地址往高地址增长，堆区通常通过malloc/realloc/free操作，堆区通常被进程的共享库、动态加载的模块所共享。</p>
-<p>例如：<br>size命令可以用来查看程序的文本段、数据段、bss段等信息。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>转载至：Linux 中的动态链接库和静态链接库是干什么的？ - wuxinliulei的回答 - 知乎<br><a href="https://www.zhihu.com/question/20484931/answer/69553616" target="_blank" rel="noopener">https://www.zhihu.com/question/20484931/answer/69553616</a></p>
+<p>库是写好的、现有的、成熟的、可以复用的代码。现实中每个程序猿都要依赖很多基础的底层库，不可能每个项目都要重复造轮子，因此库的存在有着实际的意义。</p>
+<p>本质上来说库是一种可执行代码的二进制形式，可以被操作系统载入内存运行。库函数有两种：静态库（.a/.lib）和动态库（.so/.dll）。</p>
+<h1 id="静态链接库"><a href="#静态链接库" class="headerlink" title="静态链接库"></a>静态链接库</h1><p>在这里介绍下linux下的gcc编辑的几个选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -c helloworld.cpp</span><br></pre></td></tr></table></figure>
 
-<p>添加一个全局变量，查看程序bss段的大小</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="keyword">int</span> global; <span class="comment">//uninitialized variable stored in bss</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>会将helloworld.cpp选项-c告诉编译器编译源代码但不要执行链接，输出结果为对象文件。文件名默认与源码文件名相同，但是后缀为.o。例如上面执行命令将编译源码文件helloworld.cpp并生成对象文件helloworld.o。</p>
+<p>下面这条命令将上述两个源码文件编译链接成一个可执行文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ file1.cpp file2.cpp -o file</span><br></pre></td></tr></table></figure>
 
-<p>再添加一个static变量，查看程序bss段的大小</p>
-<p>……………..翻车了，此处可能与内存对齐有关？</p>
-<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈区，与堆区相邻，地址增长的方向是从高地址往低地址增长，当堆指针遇到栈指针，代表进程空间没有剩余的空闲区域，通过虚拟内存等技术，此时会将进程的内存空间移至空间更大处。</p>
-<p>栈区通常用来存储局部变量，以及函数调用信息，每一次函数被调用，被调用函数返回的地址和某些环境信息（寄存器）都被保存在栈中，然后新调用的函数将会在栈空间为局部变量分配空间，这就是函数递归的工作原理，每次递归函数调用自身，一个新的栈信息都会被设置，因此递归函数中的局部变量不会相互影响。</p>
+<p>如果没有-o和后面的参数，编译器采用默认的a.out</p>
+<p>所谓的静态、动态是指链接。回顾一下程序编译成可执行文件的步骤：<br><img src="/2020/07/08/静态链接库和动态链接库/static_dynamic_lib1.png" alt></p>
+<p>静态库之所以称为静态库，是因为在链接阶段，会将汇编生成的目标文件.o与引用到的静态库一起链接打包到可执行文件中，因此对应的链接方式称为静态链接。</p>
+<p>试想一下，静态库与汇编生成的目标文件一起链接称为可执行文件，那么静态库必定跟.o文件格式相似。其实一个静态链接库可以简单看成一组目标文件(.o/.obj文件)的集合。</p>
+<p>静态链接库总结：</p>
+<ul>
+<li>静态链接库的链接发生在编译时期</li>
+<li>程序在运行时与函数库再无瓜葛，移植方便</li>
+<li>浪费资源和空间，因为所有相关目标文件与牵涉到的函数库被链接到一个可执行文件。</li>
+</ul>
+<p>linux下创建与使用静态库<br>linux静态库命名规范：必须是”lib[文件名].a”：lib是前缀，中间是静态库名，.a为扩展名</p>
+<p>如何创建静态链接库：<br>首先将程序编译成目标文件.o</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -c file1.cpp</span><br></pre></td></tr></table></figure>
+
+<p>注意带参数-c,否则直接编译位可执行文件<br>然后，通过ar工具将目标文件打包成.a静态库文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ar -crv file.a file.o</span><br></pre></td></tr></table></figure>
+
+<h1 id="动态链接库"><a href="#动态链接库" class="headerlink" title="动态链接库"></a>动态链接库</h1><p>通过上面的静态库，达到了代码复用的目的，那为什么还需要动态链接库呢</p>
+<h2 id="静态链接库的空间浪费"><a href="#静态链接库的空间浪费" class="headerlink" title="静态链接库的空间浪费"></a>静态链接库的空间浪费</h2><p><img src="/2020/07/08/静态链接库和动态链接库/static_dynamic_lib2.png" alt></p>
+<h2 id="静态链接库不灵活"><a href="#静态链接库不灵活" class="headerlink" title="静态链接库不灵活"></a>静态链接库不灵活</h2><p>静态链接库对程序的更新、部署和发布会带来麻烦。如果静态库更新了，将会导致使用它的应用程序都需要重新编译、发布给用户（全量更新）。</p>
+<p>而动态链接库编译器并不会被链接到目标代码中，而是在程序运行时才被载入。不同的应用程序如果调用相同的库，那么在内存里只需要有一份该共享库的实例，规避了空间浪费的问题。同时，动态库，在程序运行时才被载入，也解决了静态库对程序对程序的更新、部署和发布会带来麻烦，用户只需要更新动态库即可（增量更新）<br><img src="/2020/07/08/静态链接库和动态链接库/static_dynamic_lib3.png" alt></p>
+<p>动态链接库总结：</p>
+<ul>
+<li>动态链接库对一些库函数的连接载入推迟到程序运行时期</li>
+<li>可以实现进程之间资源贡献</li>
+<li>程序更新变得简单</li>
+</ul>
 
       
     </div>
@@ -495,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/08/进程空间/" rel="next" title="进程空间">
-                <i class="fa fa-chevron-left"></i> 进程空间
+              <a href="/2019/12/20/CS_Base/C++/单例模式/" rel="next" title="单例模式">
+                <i class="fa fa-chevron-left"></i> 单例模式
               </a>
             
           </div>
@@ -505,8 +526,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/07/08/CS_Base/OS/死锁/" rel="prev" title="死锁">
-                死锁 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/07/08/进程空间/" rel="prev" title="进程空间">
+                进程空间 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -579,7 +600,7 @@
         
           <a href="/archives">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -656,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#进程内存空间分布"><span class="nav-number">1.</span> <span class="nav-text">进程内存空间分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码段"><span class="nav-number">1.1.</span> <span class="nav-text">代码段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已初始化数据段"><span class="nav-number">1.2.</span> <span class="nav-text">已初始化数据段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未初始化数据段"><span class="nav-number">1.3.</span> <span class="nav-text">未初始化数据段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆"><span class="nav-number">1.4.</span> <span class="nav-text">堆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈"><span class="nav-number">1.5.</span> <span class="nav-text">栈</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#静态链接库"><span class="nav-number">1.</span> <span class="nav-text">静态链接库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态链接库"><span class="nav-number">2.</span> <span class="nav-text">动态链接库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态链接库的空间浪费"><span class="nav-number">2.1.</span> <span class="nav-text">静态链接库的空间浪费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态链接库不灵活"><span class="nav-number">2.2.</span> <span class="nav-text">静态链接库不灵活</span></a></li></ol></li></ol></div>
             
 
           </div>
